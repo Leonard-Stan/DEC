@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mensajes>
+    <mensaje id="1">
+        <texto>Bienvenido a la práctica de AJAX</texto>
+        <autor>Adrian</autor>
+    </mensaje>
+    <mensaje id="2">
+        <texto>texto de prueba 2</texto>
+        <autor>Bryan</autor>
+    </mensaje>
+    <mensaje id="3">
+        <texto>No me gusta XML</texto>
+        <autor>yo</autor>
+    </mensaje>
+</mensajes>

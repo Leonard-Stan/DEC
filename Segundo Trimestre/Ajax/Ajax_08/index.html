@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 8 - Mostrar JSON</title>
+    <script>
+        function mostrarJSON() {
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", "datos.json", true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    const data = JSON.parse(xhr.responseText);
+                    let contenido = "<h3>Información de Personas</h3>";
+
+                  
+                    data.people.forEach(persona => {
+                        contenido += `<p><strong>Nombre:</strong> ${persona.firstName} ${persona.lastName}<br>`;
+                        contenido += `<strong>Género:</strong> ${persona.gender}<br>`;
+                        contenido += `<strong>Edad:</strong> ${persona.age}<br>`;
+                        contenido += `<strong>Número:</strong> ${persona.number}</p><hr>`;
+                    });
+
+                   
+                    document.getElementById("contenido").innerHTML = contenido;
+                }
+            };
+            xhr.send();
+        }
+    </script>
+</head>
+<body>
+    <button onclick="mostrarJSON()">Mostrar JSON</button>
+    <div id="contenido">Aquí se mostrará el contenido del JSON</div>
+</body>
+</html>

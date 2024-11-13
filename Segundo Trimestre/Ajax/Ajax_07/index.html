@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 7 - Ejecutar PHP con Parámetros</title>
+    <script>
+        function ejecutarPHPConParametros() {
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", "saludo.php?nombre=Eduard", true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.getElementById("contenido").innerText = xhr.responseText;
+                }
+            };
+            xhr.send();
+        }
+    </script>
+</head>
+<body>
+    <button onclick="ejecutarPHPConParametros()">Enviar Parámetro</button>
+    <div id="contenido">Aquí se mostrará la respuesta de PHP</div>
+</body>
+</html>
