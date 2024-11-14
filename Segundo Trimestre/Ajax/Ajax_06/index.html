@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 6 - Ejecutar PHP sin Parámetros</title>
+    <script>
+        function ejecutarPHP() {
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", "fecha.php", true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.getElementById("contenido").innerText = xhr.responseText;
+                }
+            };
+            xhr.send();
+        }
+    </script>
+</head>
+<body>
+    <button onclick="ejecutarPHP()">Mostrar Fecha</button>
+    <div id="contenido">Aquí se mostrará la fecha</div>
+</body>
+</html>

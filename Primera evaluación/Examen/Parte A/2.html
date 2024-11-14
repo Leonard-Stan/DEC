@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> Este es el primer parrafo <a href="#"> google</a></p>
+    <p> Este es el primer parrafo <a href="#"> sport</a></p>
+    <p> Este es el primer parrafo <a href="#"> marca</a></p>
+</body>
+
+<script>
+    
+
+    let enlaces = document.querySelectorAll('a');
+
+
+enlaces.forEach(function(enlace){
+    enlace.addEventListener('mouseover', function (event) {
+        event.target.style.fontSize = "16pt";
+    })});
+
+ 
+   enlaces[0].addEventListener("mouseout", function (enlace) {
+   
+        enlaces.forEach(function (enlace) {
+            enlace.style.fontSize = "12pt";
+        })
+   })
+</script>
+</html>

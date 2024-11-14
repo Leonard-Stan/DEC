@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+   <div id="profile">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="profile-picture">
+                    <img src="img/avatar.jpeg" alt="User Avatar">
+                </div>
+                <div class="profile-info">
+                    <h3>John Doe</h3>
+                    <p>@johndoe</p>
+                </div>
+            </div>
+
+            <div class="menu">
+                <a href="#" class="menu-item">Home</a>
+                <a href="#" class="menu-item">Profile</a>
+                <a href="#" class="menu-item">Messages</a>
+                <a href="#" class="menu-item">Notifications</a>
+                <a href="#" class="menu-item">Lists</a>
+                <a href="#" class="menu-item">More</a>
+            </div>
+            
+            <button class="logout-btn">Logout</button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="cover-photo">
+                <img src="https://via.placeholder.com/1500x600" alt="Cover Photo">
+            </div>
+            
+            <div class="tweets-section">
+                <!-- Tweet Box -->
+                <div class="tweet-box">
+                    <textarea placeholder="What's happening?" rows="3"></textarea>
+                    <button class="tweet-btn">Tweet</button>
+                </div>
+
+                <!-- Tweets Feed -->
+                <div class="tweets">
+                    <div class="tweet">
+                        <div class="tweet-header">
+                            <img src="https://via.placeholder.com/50" alt="User Avatar" class="tweet-avatar">
+                            <div>
+                                <h4>John Doe</h4>
+                                <p>@johndoe · 2h ago</p>
+                            </div>
+                        </div>
+                        <p>This is a tweet. Just testing my profile page design.</p>
+                    </div>
+
+                    <div class="tweet">
+                        <div class="tweet-header">
+                            <img src="https://via.placeholder.com/50" alt="User Avatar" class="tweet-avatar">
+                            <div>
+                                <h4>John Doe</h4>
+                                <p>@johndoe · 5h ago</p>
+                            </div>
+                        </div>
+                        <p>Another tweet. Loving this Twitter-like design!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="validar">Validar</button>
+</body>
+
+
+<script>
+
+let cajaTexto = document.createElement("input");
+cajaTexto.type = "text";
+cajaTexto.id = "clave";
+document.body.appendChild(cajaTexto);
+
+
+document.getElementById("validar").addEventListener("click", function(){ 
+    let clave = document.getElementById("clave").value;
+    let patron = /[A-Z]/;
+    let patron2 = /\d{3}/;
+    if(patron.test(clave) && patron2.test(clave)){
+        alert("clave válida");
+        }else{
+            alert("clave no válida");
+            cajaTexto.value = "";
+            cajaTexto.focus();
+        }
+        });
+
+
+
+</script>
+</html>

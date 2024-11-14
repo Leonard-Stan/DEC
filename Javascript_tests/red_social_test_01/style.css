@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #192734;
+    font-family: Arial, sans-serif;
+}
+
+h2{
+    text-align: center;
+    color: #fff;
+}
+#login form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #192734;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    height: fit-content;
+}
+
+/* Estilo para los campos de entrada */
+.input-field {
+    position: relative;
+    width: 100%;
+}
+
+#user, #password {
+    width: 100%;
+    padding: 10px 15px 10px 40px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #FFF;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+#user:focus, #password:focus {
+    border-color: #FF914D;
+    background-color: rgba(255, 145, 77, 0.1);
+}
+
+/* Estilo de los íconos */
+.icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.2rem;
+    pointer-events: none;
+}
+
+.toggle-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Estilo para el checkbox de "Recordar usuario" */
+.checkbox-field {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #FFF;
+}
+
+.forgot-password a, .register-link a {
+    color: #FF914D;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-password a:hover, .register-link a:hover {
+    color: #FF7A29;
+}
+
+/* Estilo para el botón de enviar */
+#submit-btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #FF914D;
+    color: #FFF;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#submit-btn:hover {
+    background-color: #FF7A29;
+}
+
+#submit-btn:active {
+    transform: scale(0.95);
+}
+
+/* Estilo de las redes sociales */
+.social-login {
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icon {
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #FF914D;
+    transform: scale(1.1);
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form method="get">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" placeholder="introduce tu nombre">
+        <br>
+        <label for="apellido">Apellido</label>
+        <input type="text" name="apellido"  placeholder="introduce tu apellido">
+        <br>
+        <label for="correo">Correo</label>
+        <input type="email" name="correo"   placeholder="introduce tu correo">
+        <input type="submit" value="Submit">
+    </form>
+
+
+
+
+    <a href="https://www.google.com/?hl=es" id="enlace">google</a>
+</body>
+<script>
+    const form = document.querySelector('form');
+    const enlace = document.querySelector('#enlace');
+    form.addEventListener('submit', (e) => {
+        
+        const nombre = document.querySelector('input[name="nombre"]').value;
+        const apellido = document.querySelector('input[name="apellido"]').value;
+        const correo = document.querySelector('input[name="correo"]').value;
+        if(nombre=="" || apellido=="" || correo=="")
+        {
+            e.preventDefault();
+            alert("Rellena los campos");
+        }
+        
+        });
+        
+        enlace.addEventListener('click', (e) => {
+            e.preventDefault();
+            alert("hola");
+            });
+</script>
+</html>

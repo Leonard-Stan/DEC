@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1>BIENVENIDO A MI PÁGINA</h1>
+        <button onclick=inject()>Fecha actual</button>
+        <button onclick=horaActual()>Fecha actual</button>
+        <button onclick=horaActual()>Fecha actual</button>
+</body>
+<script>
+
+
+
+//ejercicio 6
+
+function horaActual() {
+    
+    var horas =new Date();
+    
+    if(horas.getHours()>=5 && horas.getHours <=11)
+    {   console.log("hola");
+        alert("buenos días");
+    }else if(horas.getHours()> 11 && horas.getHours < 20)
+    {
+        console.log("hola");
+        alert("buenas noches");
+    } else if (horas.getHours()>=20 || horas.getHours < 5)
+    {    console.log("hola");
+        alert("no va");
+    }
+}
+
+
+function inject()
+{
+   return eval("document.write('hola mundo')");
+}
+
+
+
+
+
+
+
+/* ejercicio 4
+if (navegador.indexOf("Explorer")>-1)
+{
+    alert("Estás utilizando internet explorer");
+    window.resizeTo(500, 500);
+}else
+{
+    alert("no disponible en este navegador");
+    
+
+}
+*/
+
+
+
+
+
+
+/* ejercicio1
+var fecha = new Date();+new Date().getHours
+  weekday: 'long',   
+  day: '2-digit',    
+  month: 'long',      
+  year: 'numeric' 
+};
+function fehca()
+{
+   
+    document.write(fecha.toDateString('es', opciones));
+}
+*/
+
+</script>
+</html>

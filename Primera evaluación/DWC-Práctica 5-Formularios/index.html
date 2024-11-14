@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>FORMULARIO</h1>
+    <form method="post" id="form">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" ><br><br>
+
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" name="apellido"><br><br>
+
+        <label for="telefono"></label>
+        <input type="text" id="telefono" name="telefono"><br><br>
+
+        <label for="dni">DNI</label>
+        <input type="text" id="dni" name="dni"><br><br>
+
+        <label for="sexo"></label>
+        <input type="radio" id="masculino" name="sexo" value="masculino>" checked>
+        <label for="masculino">Masculino</label>
+        <input type="radio" id="femenino" name="sexo" value="femenino">
+        <label for="femenino">Femenino</label> <br><br>
+
+        <label for="foto">Inlcuir foto:</label>
+        <input type="file" id="foto" name="foto">
+        <input type="button" id="examinar" value="Examinar"><br> <br>
+
+        <label for="publi">Enviar publicidad:</label>
+        <input type="checkbox" name="publi" checked><br><br>
+
+        <label for="aficion">Elige tu afición favorita:</label>
+        <select id="aficion" name="aficion">
+            <option value="futbol">Futbol</option>
+            <option value="basquetbol">Basquetbol</option>
+            <option value="tenis">Tenis</option>
+        </select><br><br>
+
+
+        <label for="observaciones">Observaciones:</label><br>
+        <textarea id="observaciones" name="observaciones" maxlength="150"></textarea><br><br>
+
+        <button id="save_data">guardar cambios</button>
+        <button id="clear_data">Borrar datos introducidos</button>       
+    </form>
+
+    <img src="" alt="" id="imagenCargada">
+</body>
+<script>
+    window.onload
+    {
+        var forumulario = document.getElementById("form")
+        document.getElementById("nombre").focus();
+        var guardar = document.getElementById("save_data");
+        var limpiar = document.getElementById("clear_data");
+        
+        document.getElementById("examinar").addEventListener('click', function (e) {
+        var fotoInput = document.getElementById("foto");    
+        
+        if (fotoInput && fotoInput.files.length > 0) {
+            var file = fotoInput.files[0];
+            var reader = new FileReader();
+        
+            reader.onload = function(e) {
+           
+                var img = document.getElementById("imagenCargada");
+                img.src = e.target.result;
+                img.style.display = 'block';
+            };
+        
+            reader.readAsDataURL(file);
+        } 
+    
+        else 
+        {
+        console.log("No se ha seleccionado ninguna foto.");
+        }
+        
+        limpiar.addEventListener("click", function () {
+            
+            forumulario.reset();
+        })
+
+});
+
+
+
+var aficion = document.getElementById("aficion"); 
+ 
+
+
+aficion.addEventListener("change", function () {
+    // Muestra la longitud de la lista <select>
+    alert("La longitud de la lista es " + aficion.length);
+
+    // Muestra el índice seleccionado
+    alert("El índice seleccionado es el " + aficion.selectedIndex);
+
+    // Muestra el valor del índice seleccionado
+    alert("El valor del índice seleccionado es " + aficion.value);
+});
+
+
+
+
+}
+   
+  
+
+</script>
+</html>
