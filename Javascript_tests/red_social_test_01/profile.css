@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e9eff1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+#profile {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #1a2634;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    border-right: 2px solid #404d5d;
+}
+
+.sidebar-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.profile-picture img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    object-fit: cover;
+}
+
+.profile-info {
+    text-align: center;
+}
+
+.profile-info h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.profile-info p {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-item {
+    color: #b0c1d1;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+}
+
+.menu-item:hover {
+    color: #ff914d;
+}
+
+.logout-btn {
+    padding: 12px;
+    background-color: #ff914d;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: auto;
+}
+
+.logout-btn:hover {
+    background-color: #ff7a29;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.cover-photo img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.tweets-section {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tweet-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.tweet-box textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    background-color: #f0f4f7;
+    font-size: 1rem;
+    resize: none;
+    transition: border-color 0.3s ease;
+}
+
+.tweet-box textarea:focus {
+    border-color: #ff914d;
+    outline: none;
+}
+
+.tweet-btn {
+    padding: 10px 20px;
+    background-color: #ff914d;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.tweet-btn:hover {
+    background-color: #ff7a29;
+}
+
+.tweets {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tweet {
+    background-color: #f0f4f7;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.tweet-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.tweet-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.tweet-header h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.tweet-header p {
+    font-size: 0.9rem;
+    color: #999;
+}
+
+.tweet p {
+    margin-top: 15px;
+    color: #333;
+    font-size: 1rem;
+}

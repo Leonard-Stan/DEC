@@ -1,0 +1,333 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-user-drag: none;
+}
+
+body{
+    background-color: #17101d; /* Fondo*/
+}
+
+
+/* Estilos de la barra de navegación */
+nav {
+    display: flex;
+    
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1a1226;
+    padding: 10px 20px;
+    color: white;
+    position: relative;
+}
+
+
+
+
+
+/* Zona del logo */
+#logo {
+    margin-left: 2%;
+}
+
+/* imagen Logo */
+#logo img {
+    height: 96px;
+}
+
+
+/* Botón de tienda*/
+.btn-shop{
+  background: none;
+  border: none;
+  font-size: 16pt;
+  cursor: pointer;
+  color: white;
+  transition: 0.5s;
+}
+.btn-shop:hover{
+ color: #E77D3E;
+}
+
+
+
+
+/* Estilos de la barra de búsqueda */
+.search-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 500px;
+    margin: 0 20px;
+}
+
+.search-container input[type="text"] {
+    width: 100%;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-container button {
+    width: 60px;
+    padding: 3.5px 4px;
+    background-color:  #2C3E50;
+    
+    color: white;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-container button:hover {
+    background-color: #FF914D;
+}
+
+
+
+
+
+
+
+
+
+/* Botones de usuario */
+.user-options {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-open-login, .btn-open-register {
+  background: none;
+  border: none;
+  font-size: 16pt;
+  cursor: pointer;
+  color: white;
+  transition: 0.5s;
+  margin: 20px;
+  }
+
+
+  .btn-open-login:hover, .btn-open-register:hover {
+    color: #E77D3E; /* Naranja más oscuro */
+  }
+
+  #login-register-btn, #register-login-btn{ 
+    background: none;
+    border: none;
+    color: #E77D3E;
+  }
+  #login-register-btn:hover, #register-login-btn:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  #login-register-btn:active, #register-login-btn:active {
+    transform: scale(0.9);
+
+    }
+
+
+
+
+
+
+
+
+/* Botón de menú de hamburguesa */
+.menu-button {
+    font-size: 16pt;
+    cursor: pointer;
+    color: white;
+    transition: 0.5s;
+}
+.menu-button:hover {
+    color: #eb813f;
+
+    }
+
+/* Menú lateral */
+.menu {
+    position: absolute;
+    top: 0;
+    left: -250px; /* Inicialmente oculto fuera de pantalla */
+    width: 250px;
+    height: 100%;
+    background-color: #282333;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease;
+    z-index: 9;
+}
+
+.menu.show {
+    left: 0; /* Se despliega el menú */
+}
+
+.menu-items {
+    list-style: none;
+    padding: 20px;
+    margin-top: 60px;
+}
+
+.menu-items li {
+    margin: 20px 0;
+}
+
+.menu-items li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*MODALES*/
+
+  /* Estilos para el modal */
+  .modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Contenido del modal */
+  .modal-content {
+    background-color: #1f273a; /* Fondo interno oscuro */
+    padding: 30px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Botón de cerrar */
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: #E1E8ED;
+    cursor: pointer;
+  }
+  
+  /* Títulos en los modales */
+  h1 {
+    text-align: center;
+    color: #E1E8ED; /* Blanco suave */
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  /* Estilos para los grupos de entrada */
+  .input-group {
+    margin-bottom: 15px;
+  }
+
+
+  label {
+    color: #8899A6; /* Gris claro */
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #FF914D; /* Borde gris oscuro */
+    border-radius: 5px;
+    background-color: #2C3E50; /* Fondo oscuro en inputs */
+    color: #E1E8ED; /* Texto blanco */
+    font-size: 16px;
+  }
+  
+  /* Efecto de foco en los inputs */
+  input:focus {
+    border-color: #FF914D; /* Borde naranja al enfocar */
+    outline: none;
+  }
+  
+  /* Botón de envío en el formulario */
+  button.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #FF914D; /* Naranja suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+    color: #E1E8ED; /* Blanco */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button.btn:hover {
+    background-color: #E77D3E; /* Naranja más oscuro */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Estilos para enlaces secundarios (registro o inicio de sesión) */
+  .register-link, .login-link {
+    text-align: center;
+    color: #8899A6; /* Gris claro */
+    font-size: 14px;
+    margin-top: 15px;
+  }
+  
+  .register-link a, .login-link a {
+    color: #FF914D; /* Naranja para enlaces */
+    text-decoration: none;
+  }
+  
+  .register-link a:hover, .login-link a:hover {
+    text-decoration: underline;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .search-container {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+    .user-options {
+        width: 100%;
+        justify-content: space-between;
+    }
+}

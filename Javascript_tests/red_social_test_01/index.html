@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div id="login">
+     <form action="" method="post">
+        <h2>Twixly</h2>
+
+        <!-- Campo de Usuario -->
+        <div class="input-field"> 
+            <box-icon name="user" class="icon"></box-icon>
+            <input type="text" placeholder="Username" id="user" required>
+        </div>
+
+        <!-- Campo de Contraseña -->
+        <div class="input-field">
+            <box-icon name="lock" class="icon"></box-icon>
+            <input type="password" placeholder="Password" id="password" required>
+            <box-icon name="eye" id="toggle-password" class="toggle-icon" onclick="togglePassword()"></box-icon>
+        </div>
+
+        <!-- Recordar Usuario -->
+        <div class="checkbox-field">
+            <input type="checkbox" id="remember-me">
+            <label for="remember-me">Remember me</label>
+        </div>
+
+        <!-- Enlace para recuperar Contraseña -->
+        <div class="forgot-password">
+            <a href="#">Forgot password?</a>
+        </div>
+
+        <!-- Botón de Enviar -->
+        <button type="submit" id="submit-btn">Login</button>
+
+        <!-- Opciones de Login con Redes Sociales -->
+        <div class="social-login">
+            <p>Or login with:</p>
+            <box-icon name="facebook-circle" type="logo" class="social-icon" color='#ff914d'></box-icon>
+            <box-icon name='twitter' type='logo' class="social-icon" color='#ff914d' ></box-icon>
+            <box-icon name="google" type="logo" class="social-icon" color='#ff914d'></box-icon>
+        </div>
+
+        <!-- Enlace para Registrarse -->
+        <div class="register-link">
+            <p style="color: white;">Don't have an account? <a href="#">Sign up here</a></p>
+        </div>
+     </form>
+   </div>
+</body>
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+<script>
+    // Función para mostrar/ocultar la contraseña
+    function togglePassword() {
+        var passwordField = document.getElementById('password');
+        var passwordType = passwordField.type === 'password' ? 'text' : 'password';
+        passwordField.type = passwordType;
+    }
+</script>
+</html>

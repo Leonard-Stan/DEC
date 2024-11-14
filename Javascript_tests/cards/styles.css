@@ -1,0 +1,47 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #282c34;
+    font-family: Arial, sans-serif;
+    perspective: 1000px; /* Agrega la perspectiva global */
+}
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.item {
+    width: 150px;
+    height: 150px;
+    background-color: #3498db;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.2em;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+/* Aplica transformación en el elemento en hover */
+.item:hover {
+    transform: translateZ(17.3rem);
+    background-color: #2980b9;
+}
+
+.item:hover + .item {
+    transform: translateZ(9.5rem) rotateY(-30deg);
+    background-color: #2ecc71;
+} 
+
+/* Con :has() se intenta aplicar un efecto si el siguiente está en hover */
+.item:has(+:hover)
+{
+    transform: rotateX(180deg)
+}
+

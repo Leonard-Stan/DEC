@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-area">
+            <div class="character" onclick="clickCharacter()">
+                <p>Click Me!</p>
+            </div>
+        </div>
+        <div class="menu-button" id="menu-button" onclick="toggleMenu()">☰</div>
+        <div id="menu" class="menu">
+            <ul class="menu-items">
+                <li><a href="#">Store</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Inventory</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

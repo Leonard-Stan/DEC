@@ -1,0 +1,33 @@
+/* Estilos para el contenedor de búsqueda */
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Alinea la barra de búsqueda a la derecha */
+  }
+  
+  /* Estilos para el campo de búsqueda */
+  .search-container input[type="text"] {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+  }
+  
+  /* Estilos para el botón de búsqueda */
+  .search-container button {
+    padding: 5px 10px;
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  /* Efecto hover en el botón */
+  .search-container button:hover {
+    background-color: #333;
+  }
+  
