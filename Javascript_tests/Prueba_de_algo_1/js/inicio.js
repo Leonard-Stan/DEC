@@ -30,6 +30,12 @@ function createGameCards(games) {
         const card = document.createElement('div');
         card.classList.add('card');
 
+        // Crear el elemento de imagen y asignarle la ruta completa desde 'image_path'
+        const image = document.createElement('img');
+        image.classList.add('card-image');
+        image.src = game.image_path;  // Ruta completa de la imagen del juego desde 'image_path'
+        image.alt = game.name;   // Texto alternativo para accesibilidad
+
         const title = document.createElement('div');
         title.classList.add('card-title');
         title.textContent = game.name;
@@ -42,13 +48,17 @@ function createGameCards(games) {
         score.classList.add('card-score');
         score.textContent = `Metacritic: ${game.metacritic_score}`;
 
+        // Añadir los elementos a la card
+        card.appendChild(image);
         card.appendChild(title);
         card.appendChild(genres);
         card.appendChild(score);
 
+        // Añadir la card al contenedor
         container.appendChild(card);
     });
 }
+
 
 
 // Función para filtrar juegos por géneros

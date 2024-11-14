@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (gamesContainer) {
             // Limpiar el contenedor de juegos antes de cargar las nuevas cartas
             gamesContainer.innerHTML = '';
-
+            
             // Verificar si el filtro ya existe en el DOM
             if (!document.getElementById('filter-container')) {
                 createFilter(gamesContainer); // Pasa el contenedor de juegos para insertar el filtro antes
