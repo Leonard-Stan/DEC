@@ -1,1 +1,0 @@
-alert("Esto está importado con Ajax")
