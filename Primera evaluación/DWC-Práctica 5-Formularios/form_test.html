@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form method="get" id="formulario">
+
+        <input type="text" name="name" placeholder="Enter your name">
+        <input type="email" name="email" placeholder="Enter your email">
+        <input type="password" name="password" placeholder="Enter your password">
+        <input type="submit" value="Submit">
+
+
+    </form>
+</body>
+<script>
+
+const formulario = document.getElementById("formulario");
+
+
+
+formulario.addEventListener('submit', function(evento) {
+    if (!formulario.checkValidity()) {
+      evento.preventDefault();  // Evita el envío si hay campos inválidos
+      alert("Por favor, completa todos los campos obligatorios.");
+    }
+  });
+
+
+</script>
+</html>

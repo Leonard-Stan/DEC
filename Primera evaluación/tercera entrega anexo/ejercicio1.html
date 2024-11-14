@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejercicio 1</title>
+    <script>
+        function addParagraph() {
+            const div = document.getElementById('divisor');
+            const newParagraph = document.createElement('p');
+            newParagraph.innerText = 'Párrafo añadido';
+            div.appendChild(newParagraph);
+        }
+
+        function insertParagraph() {
+            const div = document.getElementById('divisor');
+            const newParagraph = document.createElement('p');
+            newParagraph.innerText = 'Párrafo insertado';
+            div.insertBefore(newParagraph, div.children[1]); 
+        }
+
+        function replaceParagraph() {
+            const div = document.getElementById('divisor');
+            if (div.children.length > 1) {
+                div.children[1].innerText = 'Párrafo reemplazado';
+            }
+        }
+
+        function deleteParagraph() {
+            const div = document.getElementById('divisor');
+            if (div.children.length > 1) {
+                div.removeChild(div.children[1]); 
+            }
+        }
+
+        function cloneDiv() {
+            const div = document.getElementById('divisor');
+            const clone = div.cloneNode(true);
+            document.body.appendChild(clone);
+        }
+    </script>
+</head>
+<body>
+    <div id="divisor">
+        <p>Este es mi primer párrafo</p>
+    </div>
+    <button onclick="addParagraph()">Añadir párrafo</button>
+    <button onclick="insertParagraph()">Insertar párrafo</button>
+    <button onclick="replaceParagraph()">Reemplazar párrafo</button>
+    <button onclick="deleteParagraph()">Borrar párrafo</button>
+    <button onclick="cloneDiv()">Clonar div</button>
+</body>
+</html>
