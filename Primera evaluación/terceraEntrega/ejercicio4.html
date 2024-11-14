@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Adivina el Número</title>
+</head>
+<body>
+    <h1>Introduce un número del 1 al 10</h1>
+    <input type="number" id="userNumber" min="1" max="10">
+    <button onclick="jugar()">Jugar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function jugar() {
+            const numeroUsuario = parseInt(document.getElementById('userNumber').value);
+            const numeroAleatorio = Math.floor(Math.random() * 10) + 1;
+
+            if (numeroUsuario === numeroAleatorio) {
+                document.getElementById('resultado').textContent = `¡Felicidades! Adivinaste el número: ${numeroAleatorio}`;
+            } else {
+                document.getElementById('resultado').textContent = `Fallaste. El número generado fue: ${numeroAleatorio}`;
+            }
+        }
+    </script>
+</body>
+</html>

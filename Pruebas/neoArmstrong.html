@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neo Armstrong Cyclone Jet Armstrong Cannon</title>
+    <style>
+        body { margin: 0; }
+        canvas { display: block; }
+    </style>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
+    <script>
+        // Escena básica
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        // Iluminación
+        const ambientLight = new THREE.AmbientLight(0x404040, 2); // Luz suave
+        scene.add(ambientLight);
+        
+        const pointLight = new THREE.PointLight(0xffffff, 1);
+        pointLight.position.set(10, 10, 10);
+        scene.add(pointLight);
+
+        // Materiales para el cañón y las partes
+        const cannonMaterial = new THREE.MeshStandardMaterial({ color: 0x808080 });
+        const sphereMaterial = new THREE.MeshStandardMaterial({ color: 0x707070 });
+        const muzzleMaterial = new THREE.MeshStandardMaterial({ color: 0x505050 });
+
+        // Caño principal (vertical)
+        const cannonGeometry = new THREE.CylinderGeometry(1.2, 1.2, 20, 32);
+        const cannon = new THREE.Mesh(cannonGeometry, cannonMaterial);
+        cannon.position.set(0, 0, 0);  // Mantenerlo en el centro
+
+        // Crear un grupo para agrupar las piezas del cañón
+        const cannonGroup = new THREE.Group();
+        cannonGroup.add(cannon);
+
+        // Base del cañón (dos esferas)
+        const sphereGeometry = new THREE.SphereGeometry(2, 32, 32);
+        const baseLeft = new THREE.Mesh(sphereGeometry, sphereMaterial);
+        baseLeft.position.set(-3, -12, 0); // A la izquierda y debajo del cañón
+        cannonGroup.add(baseLeft);
+
+        const baseRight = new THREE.Mesh(sphereGeometry, sphereMaterial);
+        baseRight.position.set(3, -12, 0); // A la derecha y debajo del cañón
+        cannonGroup.add(baseRight);
+
+        // Boca del cañón (Muzzle) en la parte superior del cañón
+        const muzzleGeometry = new THREE.CylinderGeometry(1.5, 1.5, 3, 32);
+        const muzzle = new THREE.Mesh(muzzleGeometry, muzzleMaterial);
+        muzzle.position.set(0, 10.5, 0);  // Posición encima del cañón principal
+        cannonGroup.add(muzzle);
+
+        // Añadir el grupo de cañón a la escena
+        scene.add(cannonGroup);
+
+        // Añadir un plano (terreno) para que el "avión" se mueva sobre él
+        const planeGeometry = new THREE.PlaneGeometry(500, 500);
+        const planeMaterial = new THREE.MeshStandardMaterial({ color: 0x228B22, side: THREE.DoubleSide });
+        const plane = new THREE.Mesh(planeGeometry, planeMaterial);
+        plane.rotation.x = Math.PI / 2; // Rotarlo para que sea horizontal
+        plane.position.y = -12; // Ajustar el nivel del suelo
+        scene.add(plane);
+
+        // Posicionar la cámara
+        camera.position.z = 30;
+        camera.position.y = 5;
+
+        // Variables para los controles de vuelo
+        let velocity = 0.2; // Velocidad inicial
+        let rollSpeed = 0.02;  // Velocidad de alabeo
+        let pitchSpeed = 0.02; // Velocidad de cabeceo
+        let yawSpeed = 0.02;   // Velocidad de guiñada
+        let direction = new THREE.Vector3(0, 0, -1); // Dirección inicial
+
+        // Teclas presionadas
+        const keys = {
+            ArrowUp: false,    // Cabeceo hacia abajo
+            ArrowDown: false,  // Cabeceo hacia arriba
+            ArrowLeft: false,  // Alabeo izquierda
+            ArrowRight: false, // Alabeo derecha
+            KeyA: false,       // Guiñada izquierda
+            KeyD: false,       // Guiñada derecha
+            KeyW: false,       // Aumentar velocidad
+            KeyS: false        // Disminuir velocidad
+        };
+
+        // Detectar teclas presionadas
+        function onKeyDown(event) {
+            keys[event.code] = true;
+        }
+
+        // Detectar teclas soltadas
+        function onKeyUp(event) {
+            keys[event.code] = false;
+        }
+
+        // Función para actualizar la cámara y que siga al cañón
+        function updateCamera() {
+            // Establecer la posición de la cámara detrás y ligeramente arriba del cañón
+            const relativeCameraOffset = new THREE.Vector3(0, 5, 20);
+            const cameraOffset = relativeCameraOffset.applyMatrix4(cannonGroup.matrixWorld);
+
+            camera.position.set(cameraOffset.x, cameraOffset.y, cameraOffset.z);
+            camera.lookAt(cannonGroup.position); // Apuntar la cámara hacia el cañón
+        }
+
+        // Bucle de animación
+        function animate() {
+            requestAnimationFrame(animate);
+
+            // Control de cabeceo (pitch) con las flechas arriba/abajo
+            if (keys.ArrowUp) {
+                cannonGroup.rotateX(pitchSpeed);
+            }
+            if (keys.ArrowDown) {
+                cannonGroup.rotateX(-pitchSpeed);
+            }
+
+            // Control de alabeo (roll) con las flechas izquierda/derecha
+            if (keys.ArrowLeft) {
+                cannonGroup.rotateZ(rollSpeed);
+            }
+            if (keys.ArrowRight) {
+                cannonGroup.rotateZ(-rollSpeed);
+            }
+
+            // Control de guiñada (yaw) con las teclas A y D
+            if (keys.KeyA) {
+                cannonGroup.rotateY(yawSpeed);
+            }
+            if (keys.KeyD) {
+                cannonGroup.rotateY(-yawSpeed);
+            }
+
+            // Control de velocidad con las teclas W y S
+            if (keys.KeyW) {
+                velocity += 0.01; // Aumentar velocidad
+            }
+            if (keys.KeyS) {
+                velocity = Math.max(0.01, velocity - 0.01); // Disminuir velocidad
+            }
+
+            // Mover el avión en la dirección actual
+            const forward = new THREE.Vector3(0, 0, -1);
+            forward.applyQuaternion(cannonGroup.quaternion);
+            forward.multiplyScalar(velocity);
+            cannonGroup.position.add(forward);
+
+            // Detectar colisión con el suelo
+            if (cannonGroup.position.y <= -12) {
+                cannonGroup.position.y = -12; // Detener en el suelo
+                velocity = 0; // Detener el movimiento al chocar con el suelo
+            }
+
+            // Actualizar la posición de la cámara para que siga al cañón
+            updateCamera();
+
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        // Añadir los eventos de teclado
+        window.addEventListener('keydown', onKeyDown, false);
+        window.addEventListener('keyup', onKeyUp, false);
+    </script>
+</body>
+</html>
