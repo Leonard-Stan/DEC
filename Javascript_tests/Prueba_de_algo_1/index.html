@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="css/styles.css">
     <script defer src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script defer src="js/script.js"></script>
+    <script defer src="js/tienda.js"></script>
+  
     <link rel="icon" type="image/x-icon" href="img/Cat's Hub.png">
+    <link rel="stylesheet" href="css/inicio.css">
+
 </head>
 <body>
 
@@ -56,6 +60,10 @@
     </div>
 
 
+<!-- Contenedor donde se cargarán las cartas de juegos -->
+<div id="games-container" class="card-container"></div>
+
+
 
 
 
@@ -86,14 +94,14 @@
         <!-- Grupo de entrada para el nombre de usuario o correo -->
         <div class="input-group">
           <label for="username">Nombre de usuario o correo</label>
-          <input type="text" id="username" name="username" placeholder="Introduce tu usuario o correo" required>
+          <input type="text" id="username-login" name="username-login" placeholder="Introduce tu usuario o correo" required>
         </div>
         
         <!-- Grupo de entrada para la contraseña -->
 
         <div class="input-group">
           <label for="password">Contraseña</label>
-          <input type="password" id="password" name="password" placeholder="Introduce tu contraseña" required>
+          <input type="password" id="password-login" name="password" placeholder="Introduce tu contraseña" required>
         </div>
 
         
@@ -126,7 +134,7 @@
         <!-- Grupo de entrada para el nombre de usuario -->
         <div class="input-group">
           <label for="username">Nombre de usuario</label>
-          <input type="text" id="username" name="username" placeholder="Elige un nombre de usuario" required>
+          <input type="text" id="username-register" name="username-register" placeholder="Elige un nombre de usuario" required>
         </div>
         
         <!-- Grupo de entrada para el correo electrónico -->
@@ -138,7 +146,7 @@
         <!-- Grupo de entrada para la contraseña -->
         <div class="input-group">
           <label for="password">Contraseña</label>
-          <input type="password" id="password" name="password" placeholder="Elige una contraseña" required>
+          <input type="password" id="password-register" name="password" placeholder="Elige una contraseña" required>
         </div>
         
         <!-- Grupo de entrada para confirmar la contraseña -->

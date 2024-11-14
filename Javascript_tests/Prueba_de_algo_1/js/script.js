@@ -1,5 +1,6 @@
 // script.js
-
+//secreto: t6y5kgly2doa7gsvao9nfljn2pt2ee
+//cliente: qye74r9y8kkcivypidgwpvnw41afpz
 // Obtener elementos para el modal de registro
 const registerBtn = document.getElementById("registerBtn");
 const registerModal = document.getElementById("registerModal");
