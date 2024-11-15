@@ -60,7 +60,10 @@ function filterGames() {
     console.log("Etiquetas de filtro:", tags);
 
     const filteredGames = allGames.filter(game => {
-        return tags.every(tag => game.genre.toLowerCase().includes(tag));
+        // Verificar que 'game.genre' sea una cadena antes de llamar a 'toLowerCase'
+        const genre = typeof game.genre === 'string' ? game.genre.toLowerCase() : '';
+
+        return tags.every(tag => genre.includes(tag));
     });
 
     console.log("Juegos filtrados:", filteredGames);

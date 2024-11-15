@@ -20,8 +20,6 @@ function loadGames() {
     });
 
 }
-
-// Función para crear las cards
 function createGameCards(games) {
     const container = document.getElementById('games-container');
     container.innerHTML = ''; // Limpiar el contenedor antes de agregar nuevas cards
@@ -33,8 +31,16 @@ function createGameCards(games) {
         // Crear el elemento de imagen y asignarle la ruta completa desde 'image_path'
         const image = document.createElement('img');
         image.classList.add('card-image');
-        image.src = game.image_path;  // Ruta completa de la imagen del juego desde 'image_path'
-        image.alt = game.name;   // Texto alternativo para accesibilidad
+        
+        // Asignar la ruta de la imagen del juego
+        image.src = game.image_path;  
+        image.alt = game.name;  
+
+        // Agregar un manejador para el error de carga de la imagen
+        image.onerror = function() {
+            // Cambiar a un placeholder en caso de error
+            image.src = 'img/games/frostpunk_2.jpg'; // Aquí pones la ruta de tu imagen placeholder
+        };
 
         const title = document.createElement('div');
         title.classList.add('card-title');
@@ -57,9 +63,8 @@ function createGameCards(games) {
         // Añadir la card al contenedor
         container.appendChild(card);
     });
+
 }
-
-
 
 // Función para filtrar juegos por géneros
 function filterGames() {
