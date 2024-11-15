@@ -9,19 +9,21 @@
         function cambiarImagen() {
             const xhr = new XMLHttpRequest();
             
-          
-            const nuevaImagen = imagenActual === 1 ? "gato-boca.jpg" : "gato-fuma.gif";
+            // Definir la nueva imagen según el estado actual
+            const nuevaImagen = imagenActual === 1 ? "gato-fuma.gif" : "gato-boca.jpg";
             xhr.open("GET", nuevaImagen, true);
             
-          
+            // Escuchar cuando el servidor responda
             xhr.onload = function () {
-                if (xhr.status === 200) {
-                    document.getElementById("imagen").src = nuevaImagen;
-                 
+                if (xhr.status === 200) { // Comprobar que la imagen existe (código 200)
+                    document.getElementById("imagen").src = nuevaImagen; // Cambiar la imagen
+                    
+                   
                     imagenActual = imagenActual === 1 ? 2 : 1;
                 }
             };
 
+          
             xhr.send();
         }
     </script>

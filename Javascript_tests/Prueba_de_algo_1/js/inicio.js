@@ -1,10 +1,10 @@
-let allGames = []; // Arreglo para guardar todos los juegos
+let allGames = []; 
 
 // Función para cargar el JSON
 function loadGames() {
     fetch('popular_top_rated_games_2024.json')
     .then(response => {
-        console.log(response); // Debugging: Check if file is being accessed correctly
+        console.log(response); 
         if (!response.ok) {
             throw new Error('Network response was not ok ' + response.statusText);
         }

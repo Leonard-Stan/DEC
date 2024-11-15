@@ -1,0 +1,68 @@
+/* Estilos básicos */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .card {
+    position: relative;
+    width: 200px;
+    padding: 16px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card h2 {
+    margin: 0 0 8px;
+    font-size: 18px;
+  }
+  
+  .price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .add-to-cart-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #008CBA; /* Color del botón */
+    color: white;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-to-cart-btn.active {
+    background-color: #4CAF50; /* Color cuando se cambia a "check" */
+  }
+  
+  .add-to-cart-btn .icon {
+    font-size: 24px;
+  }
+  
+  .add-to-cart-btn.hidden {
+    display: none; /* Oculta el botón */
+  }
+  

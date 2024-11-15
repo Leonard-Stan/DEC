@@ -32,6 +32,7 @@
         {"name": "The Expanse: A Telltale Series", "genre": "Adventure", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 78, "image_path": "img/games/the_expanse_telltale.jpg"},
         {"name": "Apex Legends", "genre": "Battle Royale", "platforms": ["PC", "PS5", "Xbox", "Switch"], "metacritic_score": 89, "image_path": "img/games/apex_legends.jpg"},
         {"name": "League of Legends", "genre": "MOBA", "platforms": ["PC"], "metacritic_score": 91, "image_path": "img/games/league_of_legends.jpg"}
+        
        
     ]
 }

@@ -6,7 +6,7 @@
     <script>
         function ejecutarPHPConParametros() {
             const xhr = new XMLHttpRequest();
-            xhr.open("GET", "saludo.php?nombre=Eduard", true);
+            xhr.open("GET", "saludo.php?nombre=Adrian", true);
             xhr.onreadystatechange = function () {
                 if (xhr.readyState === 4 && xhr.status === 200) {
                     document.getElementById("contenido").innerText = xhr.responseText;

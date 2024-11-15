@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Referencia al botón y al contenedor
+   
     const tiendaButton = document.getElementById('tienda');
     const gamesContainer = document.getElementById('games-container');
     const filterContainer = document.getElementById('filter-container');
 
     tiendaButton.addEventListener('click', () => {
         if (gamesContainer) {
-            // Limpiar el contenedor de juegos antes de cargar las nuevas cartas
+           
             gamesContainer.innerHTML = '';
             
             // Verificar si el filtro ya existe en el DOM

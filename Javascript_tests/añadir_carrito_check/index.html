@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prueba de Botón Añadir al Carrito</title>
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Boxicons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h2>Nombre del Juego</h2>
+      <p class="price">$20</p>
+      <button class="add-to-cart-btn" onclick="toggleCart(this)">
+        <i class="bx bx-plus icon"></i>
+      </button>
+    </div>
+
+    <div class="card">
+      <h2>Otro Juego</h2>
+      <p class="price">$30</p>
+      <button class="add-to-cart-btn" onclick="toggleCart(this)">
+        <i class="bx bx-plus icon"></i>
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

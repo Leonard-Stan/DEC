@@ -53,12 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     };
   
-    // Función para cerrar el modal cuando se hace clic en el botón de cerrar ("X")
-    const closeLoginBtn = loginModal.querySelector(".close");
-    closeLoginBtn.onclick = function () {
-      loginModal.style.display = "none"; // Cerrar el modal al hacer clic en la "X"
-    };
-  
+    
    
   });
   
