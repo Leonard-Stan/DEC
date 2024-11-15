@@ -1,16 +1,19 @@
 {
     "most_popular_games_2024": [
-        {"name": "The Sims 4", "genre": "Simulation", "platforms": ["PC"], "metacritic_score": 80, "image_path": "img/games/the_sims_4.jpg"},
-        {"name": "Hellblade II: Senua's Saga", "genre": "Action", "platforms": ["PC", "Xbox"], "metacritic_score": 88, "image_path": "img/games/hellblade_ii.jpg"},
-        {"name": "Dune: Awakening", "genre": "MMORPG", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 79, "image_path": "img/games/dune_awakening.jpg"},
-        {"name": "Dead Island 2", "genre": "Action RPG", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 75, "image_path": "img/games/dead_island_2.jpg"},
-        {"name": "Star Wars Jedi: Survivor", "genre": "Action-Adventure", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 85, "image_path": "img/games/star_wars_jedi_survivor.jpg"},
-        {"name": "Octopath Traveler II", "genre": "RPG", "platforms": ["PC", "PS5", "Switch"], "metacritic_score": 88, "image_path": "img/games/octopath_traveler_ii.jpg"},
-        {"name": "Avatar: Frontiers of Pandora", "genre": "Action-Adventure", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 82, "image_path": "img/games/avatar_frontiers_of_pandora.jpg"},
-        {"name": "Ghostrunner 2", "genre": "Action", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 80, "image_path": "img/games/ghostrunner_2.jpg"},
-        {"name": "Lords of the Fallen", "genre": "Action RPG", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 77, "image_path": "img/games/lords_of_the_fallen.jpg"},
-        {"name": "Sonic Superstars", "genre": "Platformer", "platforms": ["PC", "PS5", "Xbox", "Switch"], "metacritic_score": 81, "image_path": "img/games/sonic_superstars.jpg"},
-        {"name": "Stalker 2: Heart of Chernobyl", "genre": "FPS", "platforms": ["PC", "Xbox"], "metacritic_score": 83, "image_path": "img/games/stalker_2.jpg"},
+        {"name": "The Sims 4", "genre": "Simulation", "platforms": ["PC"], "metacritic_score": 80, "image_path": "img/games/the_sims_4.jpg", "description": "Simulación de vida con construcción, relaciones y gestión.", "price_estimated": 19.99},
+        {"name": "Hellblade II: Senua's Saga", "genre": "Action", "platforms": ["PC", "Xbox"], "metacritic_score": 88, "image_path": "img/games/hellblade_ii.jpg", "description": "Secuela con combates y temas psicológicos.", "price_estimated": 69.99},
+        {"name": "Dune: Awakening", "genre": "MMORPG", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 79, "image_path": "img/games/dune_awakening.jpg", "description": "MMORPG en el universo de Dune.", "price_estimated": 49.99},
+        {"name": "Dead Island 2", "genre": "Action RPG", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 75, "image_path": "img/games/dead_island_2.jpg", "description": "Acción y supervivencia en un apocalipsis zombi.", "price_estimated": 59.99},
+        {"name": "Star Wars Jedi: Survivor", "genre": "Action-Adventure", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 85, "image_path": "img/games/star_wars_jedi_survivor.jpg", "description": "Aventuras y combates en el universo Star Wars.", "price_estimated": 69.99},
+        {"name": "Octopath Traveler II", "genre": "RPG", "platforms": ["PC", "PS5", "Switch"], "metacritic_score": 88, "image_path": "img/games/octopath_traveler_ii.jpg", "description": "RPG clásico con estilo pixel art y múltiples historias.", "price_estimated": 59.99},
+        {"name": "Avatar: Frontiers of Pandora", "genre": "Action-Adventure", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 82, "image_path": "img/games/avatar_frontiers_of_pandora.jpg", "description": "Explora Pandora en esta aventura de acción.", "price_estimated": 69.99},
+        {"name": "Ghostrunner 2", "genre": "Action", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 80, "image_path": "img/games/ghostrunner_2.jpg", "description": "Acción vertiginosa con parkour y combates futuristas.", "price_estimated": 39.99},
+        {"name": "Lords of the Fallen", "genre": "Action RPG", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 77, "image_path": "img/games/lords_of_the_fallen.jpg", "description": "RPG de acción en un oscuro mundo de fantasía.", "price_estimated": 59.99},
+        {"name": "Sonic Superstars", "genre": "Platformer", "platforms": ["PC", "PS5", "Xbox", "Switch"], "metacritic_score": 81, "image_path": "img/games/sonic_superstars.jpg", "description": "Juego de plataformas clásico con Sonic y amigos.", "price_estimated": 49.99},
+        {"name": "Stalker 2: Heart of Chernobyl", "genre": "FPS", "platforms": ["PC", "Xbox"], "metacritic_score": 83, "image_path": "img/games/stalker_2.jpg", "description": "FPS inmersivo en la zona de exclusión de Chernobyl.", "price_estimated": 69.99},
+
+
+
         {"name": "Ark II", "genre": "Survival", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 78, "image_path": "img/games/ark_ii.jpg"},
         {"name": "Frostpunk 2", "genre": "Strategy", "platforms": ["PC"], "metacritic_score": 86, "image_path": "img/games/frostpunk_2.jpg"},
         {"name": "Pragmata", "genre": "Action", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 84, "image_path": "img/games/pragmata.jpg"},
@@ -22,6 +25,8 @@
         {"name": "Cyberpunk 2077: Phantom Liberty", "genre": "RPG", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 92, "image_path": "img/games/cyberpunk_phantom_liberty.jpg"},
         {"name": "Lies of P", "genre": "Action RPG", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 81, "image_path": "img/games/lies_of_p.jpg"},
         {"name": "Hogwarts Legacy", "genre": "RPG", "platforms": ["PC", "PS5", "Xbox", "Switch"], "metacritic_score": 83, "image_path": "img/games/hogwarts_legacy.jpg"},
+
+
         {"name": "Assassin's Creed Mirage", "genre": "Action-Adventure", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 85, "image_path": "img/games/assassins_creed_mirage.jpg"},
         {"name": "Payday 3", "genre": "FPS", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 75, "image_path": "img/games/payday_3.jpg"},
         {"name": "Mortal Kombat 1", "genre": "Fighting", "platforms": ["PC", "PS5", "Xbox", "Switch"], "metacritic_score": 86, "image_path": "img/games/mortal_kombat_1.jpg"},
