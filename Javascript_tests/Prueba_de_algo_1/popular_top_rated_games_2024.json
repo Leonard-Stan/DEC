@@ -84,7 +84,7 @@
 
         
         {"name": "The Last Omen", "genre": "Survival, Horror", "platforms": ["PC"], "metacritic_score": 85, "image_path": "img/games/the_last_omen.jpg"}, 
-        {"name": "Mighty Morphin Power Rangers: Rita's Rewind", "genre": "Action", "platforms": ["PC", "PS5", "Xbox", "Switch"], "metacritic_score": 76, "image_path": "img/games/power_rangers_rita_rewind.jpg"},
+        {"name": "Mighty Morphin Power Rangers", "genre": "Action", "platforms": ["PC", "PS5", "Xbox", "Switch"], "metacritic_score": 76, "image_path": "img/games/power_rangers_rita_rewind.jpg"},
         {"name": "The Spirit of the Samurai", "genre": "Action RPG", "platforms": ["PC"], "metacritic_score": 53, "image_path": "img/games/spirit_of_the_samurai.jpg"},
         {"name": "Grimguard Tactics", "genre": "Tactics", "platforms": ["PC"], "metacritic_score": 75, "image_path": "img/games/grimguard_tactics.jpg"},
         {"name": "KLETKA", "genre": "Survival, Horror", "platforms": ["PC (Early Access)"], "metacritic_score": 60, "image_path": "img/games/kletka.jpg"},
