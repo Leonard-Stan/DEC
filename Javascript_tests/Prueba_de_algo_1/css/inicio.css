@@ -10,6 +10,7 @@
 /* Estilos para cada carta */
 .card {
     border: none;
+
     border-radius: 10px; 
     width: fit-content;
     height: 400px; 

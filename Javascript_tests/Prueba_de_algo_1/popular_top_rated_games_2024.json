@@ -1,38 +1,104 @@
 {
     "most_popular_games_2024": [
-        {"name": "The Sims 4", "genre": "Simulation", "platforms": ["PC"], "metacritic_score": 80, "image_path": "img/games/the_sims_4.jpg"},
-        {"name": "Hellblade II: Senua's Saga", "genre": "Action", "platforms": ["PC", "Xbox"], "metacritic_score": 88, "image_path": "img/games/hellblade_ii.jpg"},
-        {"name": "Dune: Awakening", "genre": "MMORPG", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 79, "image_path": "img/games/dune_awakening.jpg"},
-        {"name": "Dead Island 2", "genre": "Action RPG", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 75, "image_path": "img/games/dead_island_2.jpg"},
-        {"name": "Star Wars Jedi: Survivor", "genre": "Action-Adventure", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 85, "image_path": "img/games/star_wars_jedi_survivor.jpg"},
-        {"name": "Octopath Traveler II", "genre": "RPG", "platforms": ["PC", "PS5", "Switch"], "metacritic_score": 88, "image_path": "img/games/octopath_traveler_ii.jpg"},
-        {"name": "Avatar: Frontiers of Pandora", "genre": "Action-Adventure", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 82, "image_path": "img/games/avatar_frontiers_of_pandora.jpg"},
-        {"name": "Ghostrunner 2", "genre": "Action", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 80, "image_path": "img/games/ghostrunner_2.jpg"},
-        {"name": "Lords of the Fallen", "genre": "Action RPG", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 77, "image_path": "img/games/lords_of_the_fallen.jpg"},
-        {"name": "Sonic Superstars", "genre": "Platformer", "platforms": ["PC", "PS5", "Xbox", "Switch"], "metacritic_score": 81, "image_path": "img/games/sonic_superstars.jpg"},
-        {"name": "Stalker 2: Heart of Chernobyl", "genre": "FPS", "platforms": ["PC", "Xbox"], "metacritic_score": 83, "image_path": "img/games/stalker_2.jpg"},
-        {"name": "Ark II", "genre": "Survival", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 78, "image_path": "img/games/ark_ii.jpg"},
-        {"name": "Frostpunk 2", "genre": "Strategy", "platforms": ["PC"], "metacritic_score": 86, "image_path": "img/games/frostpunk_2.jpg"},
-        {"name": "Pragmata", "genre": "Action", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 84, "image_path": "img/games/pragmata.jpg"},
-        {"name": "Dragon Age Veilguard", "genre": "RPG", "platforms": ["PC", "PS5"], "metacritic_score": 56, "image_path": "img/games/dragon_age_veilguard.jpg"},
-        {"name": "Lego Horizons", "genre": "Action-Adventure", "platforms": ["PC", "PS5"], "metacritic_score": 83, "image_path": "img/games/lego_horizons.jpg"},
-        {"name": "The Wolf Among Us", "genre": "Adventure", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 88, "image_path": "img/games/the_wolf_among_us.jpg"},
-        {"name": "Diablo IV", "genre": "Action RPG", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 87, "image_path": "img/games/diablo_iv.jpg"},
-        {"name": "Armored Core VI: Fires of Rubicon", "genre": "Action", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 87, "image_path": "img/games/armored_core_vi.jpg"},
-        {"name": "Cyberpunk 2077: Phantom Liberty", "genre": "RPG", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 92, "image_path": "img/games/cyberpunk_phantom_liberty.jpg"},
-        {"name": "Lies of P", "genre": "Action RPG", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 81, "image_path": "img/games/lies_of_p.jpg"},
-        {"name": "Hogwarts Legacy", "genre": "RPG", "platforms": ["PC", "PS5", "Xbox", "Switch"], "metacritic_score": 83, "image_path": "img/games/hogwarts_legacy.jpg"},
-        {"name": "Assassin's Creed Mirage", "genre": "Action-Adventure", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 85, "image_path": "img/games/assassins_creed_mirage.jpg"},
-        {"name": "Payday 3", "genre": "FPS", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 75, "image_path": "img/games/payday_3.jpg"},
-        {"name": "Mortal Kombat 1", "genre": "Fighting", "platforms": ["PC", "PS5", "Xbox", "Switch"], "metacritic_score": 86, "image_path": "img/games/mortal_kombat_1.jpg"},
-        {"name": "Forza Motorsport", "genre": "Racing", "platforms": ["PC", "Xbox"], "metacritic_score": 84, "image_path": "img/games/forza_motorsport.jpg"},
-        {"name": "Cities: Skylines II", "genre": "Simulation", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 76, "image_path": "img/games/cities_skylines_ii.jpg"},
-        {"name": "Return to Monkey Island", "genre": "Adventure", "platforms": ["PC", "PS5", "Xbox", "Switch"], "metacritic_score": 88, "image_path": "img/games/return_to_monkey_island.jpg"},
-        {"name": "Hades II", "genre": "Roguelike", "platforms": ["PC", "Switch"], "metacritic_score": 90, "image_path": "img/games/hades_ii.jpg"},
-        {"name": "The Expanse: A Telltale Series", "genre": "Adventure", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 78, "image_path": "img/games/the_expanse_telltale.jpg"},
-        {"name": "Apex Legends", "genre": "Battle Royale", "platforms": ["PC", "PS5", "Xbox", "Switch"], "metacritic_score": 89, "image_path": "img/games/apex_legends.jpg"},
-        {"name": "League of Legends", "genre": "MOBA", "platforms": ["PC"], "metacritic_score": 91, "image_path": "img/games/league_of_legends.jpg"}
-        
+        {"name": "The Sims 4", "genre": "Simulation", "platforms": ["PC"], "metacritic_score": 80, "image_path": "img/games/the_sims_4.jpg", "description": "Simulación de vida con construcción, relaciones y gestión.", "price_estimated": 19.99},
+        {"name": "Hellblade II: Senua's Saga", "genre": "Action", "platforms": ["PC", "Xbox"], "metacritic_score": 88, "image_path": "img/games/hellblade_ii.jpg", "description": "Secuela con combates y temas psicológicos.", "price_estimated": 69.99},
+        {"name": "Dune: Awakening", "genre": "MMORPG", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 79, "image_path": "img/games/dune_awakening.jpg", "description": "MMORPG en el universo de Dune.", "price_estimated": 49.99},
+        {"name": "Dead Island 2", "genre": "Action RPG", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 75, "image_path": "img/games/dead_island_2.jpg", "description": "Acción y supervivencia en un apocalipsis zombi.", "price_estimated": 59.99},
+        {"name": "Star Wars Jedi: Survivor", "genre": "Action-Adventure", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 85, "image_path": "img/games/star_wars_jedi_survivor.jpg", "description": "Aventuras y combates en el universo Star Wars.", "price_estimated": 69.99},
+        {"name": "Octopath Traveler II", "genre": "RPG", "platforms": ["PC", "PS5", "Switch"], "metacritic_score": 88, "image_path": "img/games/octopath_traveler_ii.jpg", "description": "RPG clásico con estilo pixel art y múltiples historias.", "price_estimated": 59.99},
+        {"name": "Avatar: Frontiers of Pandora", "genre": "Action-Adventure", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 82, "image_path": "img/games/avatar_frontiers_of_pandora.jpg", "description": "Explora Pandora en esta aventura de acción.", "price_estimated": 69.99},
+        {"name": "Ghostrunner 2", "genre": "Action", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 80, "image_path": "img/games/ghostrunner_2.jpg", "description": "Acción vertiginosa con parkour y combates futuristas.", "price_estimated": 39.99},
+        {"name": "Lords of the Fallen", "genre": "Action RPG", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 77, "image_path": "img/games/lords_of_the_fallen.jpg", "description": "RPG de acción en un oscuro mundo de fantasía.", "price_estimated": 59.99},
+        {"name": "Sonic Superstars", "genre": "Platformer", "platforms": ["PC", "PS5", "Xbox", "Switch"], "metacritic_score": 81, "image_path": "img/games/sonic_superstars.jpg", "description": "Juego de plataformas clásico con Sonic y amigos.", "price_estimated": 49.99},
+
+
+
+
+        {"name": "Stalker 2: Heart of Chernobyl", "genre": "FPS", "platforms": ["PC", "Xbox"], "metacritic_score": 83, "image_path": "img/games/stalker_2.jpg", "description": "FPS inmersivo en la zona de exclusión de Chernobyl.", "price_estimated": 69.99},
+        {"name": "Ark II", "genre": "Survival", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 78, "image_path": "img/games/ark_ii.jpg", "description": "Juego de supervivencia con dinosaurios en un mundo hostil.", "price_estimated": 59.99},
+        {"name": "Frostpunk 2", "genre": "Strategy", "platforms": ["PC"], "metacritic_score": 86, "image_path": "img/games/frostpunk_2.jpg", "description": "Secuela del juego de estrategia sobre supervivencia en un mundo helado.", "price_estimated": 49.99},
+        {"name": "Pragmata", "genre": "Action", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 84, "image_path": "img/games/pragmata.jpg", "description": "Aventura de acción en un futuro distópico con misterios espaciales.", "price_estimated": 69.99},
+        {"name": "Dragon Age Veilguard", "genre": "RPG", "platforms": ["PC", "PS5"], "metacritic_score": 56, "image_path": "img/games/dragon_age_veilguard.jpg", "description": "Juego de rol en el universo Dragon Age con enfoque en historia y combate.", "price_estimated": 39.99},
+        {"name": "Lego Horizons", "genre": "Action-Adventure", "platforms": ["PC", "PS5"], "metacritic_score": 83, "image_path": "img/games/lego_horizons.jpg", "description": "Aventura interactiva en un universo de LEGO lleno de creatividad.", "price_estimated": 49.99},
+        {"name": "The Wolf Among Us", "genre": "Adventure", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 88, "image_path": "img/games/the_wolf_among_us.jpg", "description": "Aventura gráfica basada en el universo de cómics Fables.", "price_estimated": 29.99},
+        {"name": "Diablo IV", "genre": "Action RPG", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 87, "image_path": "img/games/diablo_iv.jpg", "description": "Acción y rol en un oscuro universo lleno de demonios y mazmorras.", "price_estimated": 69.99},
+        {"name": "Armored Core VI: Fires of Rubicon", "genre": "Action", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 87, "image_path": "img/games/armored_core_vi.jpg", "description": "Juego de acción mech centrado en combates tácticos y personalización.", "price_estimated": 59.99},
+        {"name": "Cyberpunk 2077: Phantom Liberty", "genre": "RPG", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 92, "image_path": "img/games/cyberpunk_phantom_liberty.jpg", "description": "Expansión del aclamado Cyberpunk 2077 con nuevas historias y personajes.", "price_estimated": 29.99},
+
+
+
+
+        {"name": "Lies of P", "genre": "Action RPG", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 81, "image_path": "img/games/lies_of_p.jpg", "description": "Acción y rol inspirado en cuentos clásicos con un giro oscuro.", "price_estimated": 59.99},
+        {"name": "Hogwarts Legacy", "genre": "RPG", "platforms": ["PC", "PS5", "Xbox", "Switch"], "metacritic_score": 83, "image_path": "img/games/hogwarts_legacy.jpg", "description": "Explora el mundo mágico de Hogwarts en esta épica aventura de rol.", "price_estimated": 69.99},      
+        {"name": "Assassin's Creed Mirage", "genre": "Action-Adventure", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 85, "image_path": "img/games/assassins_creed_mirage.jpg", "description": "Aventura histórica con sigilo y acción ambientada en Medio Oriente.", "price_estimated": 59.99},
+        {"name": "Payday 3", "genre": "FPS", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 75, "image_path": "img/games/payday_3.jpg", "description": "Simulación de robos en equipo con intensa acción multijugador.", "price_estimated": 39.99},
+        {"name": "Mortal Kombat 1", "genre": "Fighting", "platforms": ["PC", "PS5", "Xbox", "Switch"], "metacritic_score": 86, "image_path": "img/games/mortal_kombat_1.jpg", "description": "Reinicio de la saga con combates brutales y gráficos impresionantes.", "price_estimated": 69.99},
+        {"name": "Forza Motorsport", "genre": "Racing", "platforms": ["PC", "Xbox"], "metacritic_score": 84, "image_path": "img/games/forza_motorsport.jpg", "description": "Simulación de carreras con un enfoque en realismo y personalización.", "price_estimated": 59.99},
+        {"name": "Cities: Skylines II", "genre": "Simulation", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 76, "image_path": "img/games/cities_skylines_ii.jpg", "description": "Crea y gestiona tu ciudad en esta profunda simulación urbana.", "price_estimated": 49.99},
+        {"name": "Return to Monkey Island", "genre": "Adventure", "platforms": ["PC", "PS5", "Xbox", "Switch"], "metacritic_score": 88, "image_path": "img/games/return_to_monkey_island.jpg", "description": "Aventura gráfica clásica con humor y rompecabezas ingeniosos.", "price_estimated": 29.99},
+        {"name": "Hades II", "genre": "Roguelike", "platforms": ["PC", "Switch"], "metacritic_score": 90, "image_path": "img/games/hades_ii.jpg", "description": "Secuela del aclamado Hades con combates rápidos y mitología griega.", "price_estimated": 29.99},
+        {"name": "The Expanse: A Telltale Series", "genre": "Adventure", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 78, "image_path": "img/games/the_expanse_telltale.jpg", "description": "Aventura narrativa basada en la popular serie de ciencia ficción.", "price_estimated": 39.99},
        
+       
+
+
+        {"name": "Apex Legends", "genre": "Battle Royale", "platforms": ["PC", "PS5", "Xbox", "Switch"], "metacritic_score": 89, "image_path": "img/games/apex_legends.jpg", "description": "Juego de disparos en equipo con mecánicas de héroes y batalla real.", "price_estimated": 0.00},
+        {"name": "League of Legends", "genre": "MOBA", "platforms": ["PC"], "metacritic_score": 91, "image_path": "img/games/league_of_legends.jpg", "description": "MOBA competitivo con estrategia y acción en equipo.", "price_estimated": 0.00},
+        {"name":"Black Myth: Wukong","genre":["Action","Adventure"],"platforms":["PC"],"metacritic_score":89,"image_path":"img/games/black_myth_wukong.jpg","description":"Aventura mitológica china con combates intensos y criaturas mágicas.","price":59.99},
+        {"name":"Disco Elysium","genre":["RPG","Narrative"],"platforms":["PC"],"metacritic_score":97,"image_path":"img/games/disco_elysium.jpg","description":"RPG narrativo donde resuelves un caso como detective en una ciudad decadente.","price":39.99},
+        {"name":"Stardew Valley","genre":["Simulation","RPG"],"platforms":["PC"],"metacritic_score":89,"image_path":"img/games/stardew_valley.jpg","description":"Simulador de granja con exploración y gestión de recursos.","price":14.99},
+        {"name":"Doom Eternal","genre":["FPS","Action"],"platforms":["PC"],"metacritic_score":88,"image_path":"img/games/doom_eternal.jpg","description":"Shooter frenético con combates viscerales y hordas de demonios.","price":29.99},
+        {"name":"Hollow Knight","genre":["Metroidvania","Adventure"],"platforms":["PC"],"metacritic_score":90,"image_path":"img/games/hollow_knight.jpg","description":"Exploración en un reino subterráneo lleno de secretos y desafíos.","price":14.99},  
+        {"name":"Deep Rock Galactic","genre":["Co-op","Shooter"],"platforms":["PC"],"metacritic_score":85,"price":29.99,"description":"Juego cooperativo donde encarnas a enanos espaciales en misiones de minería y combate en cuevas generadas proceduralmente.","image_path":"img/games/deep_rock_galactic.jpg"},
+        {"name":"Black Mesa","genre":["FPS","Remake"],"platforms":["PC"],"metacritic_score":84,"price":19.99,"description":"Reimaginación moderna de Half-Life con gráficos actualizados y mejoras en la jugabilidad.","image_path":"img/games/black_mesa.jpg"},
+        {"name":"XCOM 2","genre":["Táctica","Estrategia"],"platforms":["PC"],"metacritic_score":88,"price":23.99,"description":"Juego de estrategia por turnos donde lideras la resistencia humana contra una invasión alienígena.","image_path":"img/games/xcom_2.jpg"},
+     
+     
+     
+
+        {"name":"Yakuza 0","genre":["Acción","Aventura"],"platforms":["PC"],"metacritic_score":90,"price":19.99,"description":"Precuela de la serie Yakuza que mezcla combates frenéticos con una narrativa profunda en el Japón de los años 80.","image_path":"img/games/yakuza_0.jpg"},
+        {"name":"Dishonored","genre":["Acción","Sigilo"],"platforms":["PC"],"metacritic_score":91,"price":19.99,"description":"Juego de sigilo donde utilizas poderes sobrenaturales para vengarte en un mundo steampunk.","image_path":"img/games/dishonored.jpg"},
+        {"name": "Slay the Spire", "genre": ["Card", "Roguelike"], "platforms": ["PC"], "metacritic_score": 89, "description": "Un híbrido de construcción de mazos y roguelike con estrategias dinámicas y desafíos variados.", "price": 24.99, "image_path": "img/games/slay_the_spire.jpg"},
+        {"name": "Celeste", "genre": ["Platformer", "Indie"], "platforms": ["PC"], "metacritic_score": 94, "description": "Un desafiante juego de plataformas con una emotiva narrativa sobre superación personal.", "price": 19.99, "image_path": "img/games/celeste.jpg"},
+        {"name": "Frostpunk", "genre": ["Strategy", "Survival"], "platforms": ["PC"], "metacritic_score": 87, "description": "Gestiona una ciudad en un mundo helado donde cada decisión afecta la supervivencia de tus ciudadanos.", "price": 29.99, "image_path": "img/games/frostpunk.jpg"},
+        {"name": "Terraria", "genre": ["Sandbox", "Adventure"], "platforms": ["PC"], "metacritic_score": 83, "description": "Explora, construye y lucha en un mundo pixelado repleto de misterios y enemigos únicos.", "price": 9.99, "image_path": "img/games/terraria.jpg"},
+        {"name": "Factorio", "genre": ["Simulation", "Strategy"], "platforms": ["PC"], "metacritic_score": 89, "description": "Construye y optimiza fábricas complejas mientras te defiendes de amenazas alienígenas.", "price": 30.00, "image_path": "img/games/factorio.jpg"},
+        {"name": "Subnautica", "genre": ["Survival", "Adventure"], "platforms": ["PC"], "metacritic_score": 87, "description": "Sobrevive y explora un misterioso océano alienígena lleno de secretos y criaturas peligrosas.", "price": 24.99, "image_path": "img/games/subnautica.jpg"},
+        {"name": "Diesel Legacy: The Brazen Age", "genre": "2D Fighter, Steampunk", "platforms": ["PC"], "metacritic_score": 85, "image_path": "img/games/diesel_legacy.jpg"},
+        
+        
+
+
+        {"name": "Entropy Survivors", "genre": "Roguelike, Bullet-hell", "platforms": ["PC"], "metacritic_score": 83, "image_path": "img/games/entropy_survivors.jpg"},
+        {"name": "Marvel Rivals", "genre": "PvP, FPS, Superheroes", "platforms": ["PC"], "metacritic_score": 80, "image_path": "img/games/marvel_rivals.jpg"},
+        {"name": "Path of Exile 2", "genre": "ARPG", "platforms": ["PC"], "metacritic_score": 90, "image_path": "img/games/path_of_exile_2.jpg"},
+        {"name": "The Midnight Crimes", "genre": "Point-and-click, Detective", "platforms": ["PC"], "metacritic_score": 75, "image_path": "img/games/midnight_crimes.jpg"},
+        {"name": "The Outer Worlds", "genre": "RPG, Sci-fi", " platforms": ["PC"], "metacritic_score": 87, "image_path": " img/games/outer_worlds.jpg"},       
+        {"name": "Helldivers 2", "genre": "Shooter, Strategy", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 85, "image_path": "img/games/helldivers_2.jpg"},
+        {"name": "Balatro", "genre": "Card, Roguelike", "platforms": ["PC"], "metacritic_score": 82, "image_path": "img/games/balatro.jpg"},
+        {"name": "Enshrouded", "genre": "Survival, RPG", "platforms": ["PC"], "metacritic_score": 75, "image_path": "img/games/enshrouded.jpg"},
+        {"name": "Mirthwood", "genre": "RPG, Sandbox", "platforms": ["PC"], "metacritic_score": 78, "image_path": "img/games/mirthwood.jpg"},
+        {"name": "Empire of the Ants", "genre": "Strategy", "platforms": ["PC"], "metacritic_score": 80, "image_path": "img/games/empire_of_the_ants.jpg"},
+        
+
+
+        
+        {"name": "The Last Omen", "genre": "Survival, Horror", "platforms": ["PC"], "metacritic_score": 85, "image_path": "img/games/the_last_omen.jpg"}, 
+        {"name": "Mighty Morphin Power Rangers", "genre": "Action", "platforms": ["PC", "PS5", "Xbox", "Switch"], "metacritic_score": 76, "image_path": "img/games/power_rangers_rita_rewind.jpg"},
+        {"name": "The Spirit of the Samurai", "genre": "Action RPG", "platforms": ["PC"], "metacritic_score": 53, "image_path": "img/games/spirit_of_the_samurai.jpg"},
+        {"name": "Grimguard Tactics", "genre": "Tactics", "platforms": ["PC"], "metacritic_score": 75, "image_path": "img/games/grimguard_tactics.jpg"},
+        {"name": "KLETKA", "genre": "Survival, Horror", "platforms": ["PC (Early Access)"], "metacritic_score": 60, "image_path": "img/games/kletka.jpg"},
+        {"name": "Legacy of Kain: Soul Reaver 1 & 2 HD", "genre": "Action-Adventure, RPG", "platforms": ["PC"], "metacritic_score": 85, "image_path": "img/games/legacy_of_kain_remastered.jpg"},
+        {"name": "Anticipated - Galactic Civilizations IV", "genre": "Strategy", "platforms": ["PC"], "metacritic_score": 85, "image_path": "img/games/galactic_civilizations_iv.jpg"},
+        {"name": "Shred & Tear: Explosive Kajun", "genre": "Action", "platforms": ["PC", "PS5", "Xbox Series X"], "metacritic_score": 79, "image_path": "img/games/shred_and_tear.jpg"},
+        {"name": "Croc: Legend of the Gobbos Remaster", "genre": "Platformer, Adventure", "platforms": ["PC", "PS5", "Switch"], "metacritic_score": 80, "image_path": "img/games/croc_remaster.jpg"},
+        
+
+
+        
+        {"name": "Don't Be Afraid 2", "genre": "Horror", "platforms": ["PC", "PS5", "Xbox Series X", "Switch"], "metacritic_score": 70, "image_path": "img/games/dont_be_afraid_2.jpg"},
+        {"name": "Captain Blood", "genre": "Adventure, RPG", "platforms": ["PC", "PS5", "Xbox Series X", "Switch"], "metacritic_score": 78, "image_path": "img/games/captain_blood.jpg"},
+        {"name": "Resident Evil 4 Remake", "genre": "Survival Horror, Action-Adventure", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 92, "image_path": "img/games/resident_evil_4_remake.jpg"},
+        {"name": "Warhammer 40,000: Space Marine 2", "genre": "Action, Shooter", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 86, "image_path": "img/games/warhammer_40k_space_marine_2.jpg"}
     ]
 }
