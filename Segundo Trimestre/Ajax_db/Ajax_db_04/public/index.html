@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar XML Externo</title>
+</head>
+<body>
+    <h1>Enviar un archivo XML al servidor</h1>
+    <p>Selecciona un archivo XML para enviarlo al servidor:</p>
+    <input type="file" id="archivoXml" accept=".xml">
+    <br>
+    <button id="enviar">Enviar</button>
+    <div id="respuesta"></div>
+
+    <script>
+        document.getElementById("enviar").addEventListener("click", function () {
+            const archivo = document.getElementById("archivoXml").files[0];
+
+            if (!archivo) {
+                document.getElementById("respuesta").innerHTML = `<p>Por favor, selecciona un archivo XML.</p>`;
+                return;
+            }
+
+            const lector = new FileReader();
+
+            lector.onload = function (evento) {
+                const contenidoXml = evento.target.result;
+
+                fetch("procesar.php", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/xml"
+                    },
+                    body: contenidoXml
+                })
+                .then(response => response.text()) 
+                .then(data => {
+                    document.getElementById("respuesta").innerHTML = `<p>${data}</p>`;
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    document.getElementById("respuesta").innerHTML = `<p>Error al procesar la solicitud.</p>`;
+                });
+            };
+
+            lector.readAsText(archivo); 
+        });
+    </script>
+</body>
+</html>

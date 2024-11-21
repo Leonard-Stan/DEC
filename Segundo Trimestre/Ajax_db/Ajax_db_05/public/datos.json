@@ -1,0 +1,6 @@
+{
+    "nombre": "Juan Pérez",
+    "edad": 30,
+    "email": "juan.perez@example.com",
+    "intereses": ["programación", "música", "deportes"]
+}
