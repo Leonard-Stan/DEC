@@ -115,9 +115,26 @@ nav {
   margin: 20px;
   }
 
+  .btn-open-login::after, .btn-open-register::after, .categoria::after, .btn-shop::after{
+   content: '';
+    display: block;
+    margin-left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #FF914D;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+    
+    }
+    .btn-open-login:hover::after, .btn-open-register:hover::after, .categoria:hover::after, .btn-shop:hover::after{
+    width: 100%;
+
+      }
+
 
   .btn-open-login:hover, .btn-open-register:hover {
-    color: #E77D3E; /* Naranja más oscuro */
+    color: #E77D3E;
   }
 
   #login-register-btn, #register-login-btn{ 
@@ -133,8 +150,6 @@ nav {
     transform: scale(0.9);
 
     }
-
-
 
 
 
