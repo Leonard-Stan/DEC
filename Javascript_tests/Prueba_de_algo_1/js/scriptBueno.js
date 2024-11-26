@@ -18,12 +18,12 @@ const loginRegisterBtn = document.getElementById("login-register-btn");
 const closeButtons = document.querySelectorAll(".close");
 
 
-
+/*  const menu = document.getElementById('menu');
+    menu.classList.toggle('show');*/
 
 
 function toggleMenu() {
-  /*  const menu = document.getElementById('menu');
-    menu.classList.toggle('show');*/
+  
     const menu = document.getElementById('menu');
     const menuButton = document.getElementById('menu-button');
     
