@@ -83,21 +83,16 @@
 
 
         
-        {"name": "The Last Omen", "genre": "Survival, Horror", "platforms": ["PC"], "metacritic_score": 85, "image_path": "img/games/the_last_omen.jpg"}, 
+    
         {"name": "Mighty Morphin Power Rangers", "genre": "Action", "platforms": ["PC", "PS5", "Xbox", "Switch"], "metacritic_score": 76, "image_path": "img/games/power_rangers_rita_rewind.jpg"},
         {"name": "The Spirit of the Samurai", "genre": "Action RPG", "platforms": ["PC"], "metacritic_score": 53, "image_path": "img/games/spirit_of_the_samurai.jpg"},
-        {"name": "Grimguard Tactics", "genre": "Tactics", "platforms": ["PC"], "metacritic_score": 75, "image_path": "img/games/grimguard_tactics.jpg"},
         {"name": "KLETKA", "genre": "Survival, Horror", "platforms": ["PC (Early Access)"], "metacritic_score": 60, "image_path": "img/games/kletka.jpg"},
-        {"name": "Legacy of Kain: Soul Reaver 1 & 2 HD", "genre": "Action-Adventure, RPG", "platforms": ["PC"], "metacritic_score": 85, "image_path": "img/games/legacy_of_kain_remastered.jpg"},
         {"name": "Anticipated - Galactic Civilizations IV", "genre": "Strategy", "platforms": ["PC"], "metacritic_score": 85, "image_path": "img/games/galactic_civilizations_iv.jpg"},
-        {"name": "Shred & Tear: Explosive Kajun", "genre": "Action", "platforms": ["PC", "PS5", "Xbox Series X"], "metacritic_score": 79, "image_path": "img/games/shred_and_tear.jpg"},
-        {"name": "Croc: Legend of the Gobbos Remaster", "genre": "Platformer, Adventure", "platforms": ["PC", "PS5", "Switch"], "metacritic_score": 80, "image_path": "img/games/croc_remaster.jpg"},
         
 
 
         
         {"name": "Don't Be Afraid 2", "genre": "Horror", "platforms": ["PC", "PS5", "Xbox Series X", "Switch"], "metacritic_score": 70, "image_path": "img/games/dont_be_afraid_2.jpg"},
-        {"name": "Captain Blood", "genre": "Adventure, RPG", "platforms": ["PC", "PS5", "Xbox Series X", "Switch"], "metacritic_score": 78, "image_path": "img/games/captain_blood.jpg"},
         {"name": "Resident Evil 4 Remake", "genre": "Survival Horror, Action-Adventure", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 92, "image_path": "img/games/resident_evil_4_remake.jpg"},
         {"name": "Warhammer 40,000: Space Marine 2", "genre": "Action, Shooter", "platforms": ["PC", "PS5", "Xbox"], "metacritic_score": 86, "image_path": "img/games/warhammer_40k_space_marine_2.jpg"}
     ]
