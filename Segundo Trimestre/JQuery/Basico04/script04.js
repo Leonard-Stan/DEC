@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+ 
     $("body").append(`
       <form>
         <label for="a">Valor A</label>
@@ -13,40 +13,34 @@ $(document).ready(function () {
       </form>
     `);
   
-    
+   
     $("body").append(`
       <input type="text" id="resultado" readonly placeholder="Resultado">
     `);
   
-    const resultadoField = $("#resultado");
-  
+$("#resultado").hide()
+     
 
-    resultadoField.hide(0);
-  
- 
-    $("input[type=text]").on("change", function () {
+   $("#cajitafeliz").on("change", function () 
    
-        if(!isNaN(a) && !isNaN(b)){
+   {
+    if ($("#cajitafeliz").is(":checked")) {
+        
 
-      let a = parseFloat($("#a").val());
-      let b = parseFloat($("#second").val());
-        }
+        $("#resultado").val( parseFloat($("#a").val())+parseFloat($("#second").val()));
+        $("#resultado").show();
+       
+    } 
+      
+    else {
+        
+        $("#resultado").val("");
+        $("#resultado").hide();
+    }
+    
+    
+   })
      
   
-     
   });
-
-  $("#cajitafeliz").is(":checked", function () {
-    let resultado = a + b;
-    resultadoField.val(resultado);
-    resultadoField.show(0);
-
-    
-  })
-    
   
-
-  
-
-    
-});
