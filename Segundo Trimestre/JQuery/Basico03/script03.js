@@ -15,7 +15,7 @@ $(document).ready(function(){
 
 
     $("input[type=radio]").on('change', function () {
-        $("p").css("color", $(this).val());
+        $("p").css("background-color", $(this).val());
         
     })
 

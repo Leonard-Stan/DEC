@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Navideña Compleja</title>
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            background: url('http://placekitten.com/1920/1080'); /* Puedes cambiar esta URL a una imagen navideña */
+            background-size: cover;
+            background-position: center;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-size: 3rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .snowflake {
+            position: fixed;
+            top: -10%;
+            width: 30px;
+            height: 30px;
+            pointer-events: none;
+            background: url('http://placekitten.com/30/30'); /* Reemplaza con un copo de nieve */
+            background-size: cover;
+            animation: fall 10s linear infinite, sway 3s ease-in-out infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100%);
+                left: calc(100% * var(--pos));
+            }
+            100% {
+                transform: translateY(110vh);
+                left: calc(100% * var(--pos));
+            }
+        }
+
+        @keyframes sway {
+            0%, 100% {
+                transform: translateX(-10px);
+            }
+            50% {
+                transform: translateX(10px);
+            }
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            cursor: pointer;
+            transform: scale(1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.4);
+        }
+
+        .card i {
+            font-size: 60px;
+            margin-bottom: 15px;
+            color: #ffd700;
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: #fff;
+            color: #333;
+            padding: 30px;
+            border-radius: 15px;
+            width: 450px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-content h2 {
+            margin-top: 0;
+        }
+
+        .modal-close {
+            background: #ff0033;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+
+        .modal-close:hover {
+            background: #ff5050;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        🎄 ¡Bienvenidos a la Magia de la Navidad! 🎅
+    </header>
+
+    <div class="container">
+        <div class="card" onclick="showModal('modal1')">
+            <i class='bx bxs-gift'></i>
+            <h3>Regalos</h3>
+        </div>
+        <div class="card" onclick="showModal('modal2')">
+            <i class='bx bxs-tree'></i>
+            <h3>Árbol</h3>
+        </div>
+        <div class="card" onclick="showModal('modal3')">
+            <i class='bx bxs-bell'></i>
+            <h3>Campanas</h3>
+        </div>
+    </div>
+
+    <div id="modal1" class="modal">
+        <div class="modal-content animate__animated animate__fadeIn">
+            <h2>🎁 Regalos</h2>
+            <p>¡Aquí están todos los regalos navideños que has estado esperando!</p>
+            <button class="modal-close" onclick="closeModal('modal1')">Cerrar</button>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content animate__animated animate__fadeIn">
+            <h2>🎄 Árbol de Navidad</h2>
+            <p>El árbol navideño está decorado con luces y estrellas brillantes.</p>
+            <button class="modal-close" onclick="closeModal('modal2')">Cerrar</button>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content animate__animated animate__fadeIn">
+            <h2>🔔 Campanas Navideñas</h2>
+            <p>Las campanas suenan para celebrar la alegría de la Navidad.</p>
+            <button class="modal-close" onclick="closeModal('modal3')">Cerrar</button>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2023 ¡Feliz Navidad para todos! 🎅✨
+    </footer>
+
+    <script>
+        for (let i = 0; i < 50; i++) {
+            const snowflake = document.createElement('div');
+            snowflake.className = 'snowflake';
+            snowflake.style.setProperty('--pos', Math.random());
+            document.body.appendChild(snowflake);
+        }
+
+        function showModal(modalId) {
+            document.getElementById(modalId).classList.add('active');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+        }
+    </script>
+</body>
+</html>

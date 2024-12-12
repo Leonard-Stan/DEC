@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    
+    <h2>Mostrar Fichero XML</h2>
+    <button id="mostrarXML">Mostrar fichero XML</button>
+    <div id="contenidoXML"></div>
+
+    <script>
+        $("#mostrarXML").click(function() {
+            $.get("archivo.xml", function(data) {
+                let salida = "<ul>";
+                $(data).find("item").each(function() {
+                    salida += "<li>" + $(this).text() + "</li>";
+                });
+                salida += "</ul>";
+                $("#contenidoXML").html(salida);
+            }).fail(function() {
+                alert("Error al cargar el fichero XML.");
+            });
+        });
+    </script>
+</body>
+</html>

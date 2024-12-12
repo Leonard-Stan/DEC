@@ -13,7 +13,8 @@
 
     <script>
         $("#enviarParametros").click(function() {
-            $.post("procesar.php", { nombre: "Juan", apellido: "Pérez" }, function(data) {
+            $.post("procesar.php", { 
+                nombre: "Juan", apellido: "Pérez" }, function(data) {
                 $("#resultadoPHP").html(data);
             }).fail(function() {
                 alert("Error al procesar la petición.");

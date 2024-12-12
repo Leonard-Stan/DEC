@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    
+    <div style="display: none;">
+        <img src="https://i.gifer.com/ZZ5H.gif" alt="">
+    </div>
+
+
+    <script>
+        $("div").show();
+        $.ajax({
+        
+            type:"GET",
+            url: "fecha.php",
+
+            success: function (hora) {
+                                
+                $("div").html(hora);
+
+            },
+                error: function () {
+                alert("no funciona");            
+            }
+            })
+
+    </script>
+</body>
+</html>

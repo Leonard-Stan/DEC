@@ -7,9 +7,7 @@ $("body").append(`
 
 `)
 /*
-$("img").fadeOut(2000)
-.slideDown(2000)
-.slideUp(2000);
+$("img").fadeOut(2000).slideDown(2000).slideUp(2000);
 */
 $("img").fadeOut(2000, function() {
     $(this).slideDown(3000, function() {
