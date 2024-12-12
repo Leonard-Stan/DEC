@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h2>Ejercicio 5: Obtener Países de Europa</h2>
+    <button id="obtenerPaises">Obtener Países</button>
+    <div id="paisesEuropa"></div>
+
+    <script>
+        $("#obtenerPaises").click(function() {
+            $.ajax({
+                url: "https://restcountries.com/v3.1/region/europe",
+                method: "GET",
+                dataType: "json",
+                success: function(data) {
+                    let salida = "<ul>";
+                    data.forEach(function(pais) {
+                        salida += `<li>${pais.name.common}</li>`;
+                    });
+                    salida += "</ul>";
+                    $("#paisesEuropa").html(salida);
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    $("#paisesEuropa").html(
+                        `<p>Error: ${jqXHR.status} - ${errorThrown}</p>`
+                    );
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>

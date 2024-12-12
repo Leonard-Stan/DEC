@@ -66,7 +66,7 @@ function createGameCards(games) {
 
 }
 
-// Función para filtrar juegos por géneros
+/* Función para filtrar juegos por géneros
 function filterGames() {
     const tags = document.getElementById('tag-input').value.toLowerCase().split(',').map(tag => tag.trim());
     console.log("Etiquetas de filtro:", tags);
@@ -92,3 +92,4 @@ function sortByScore() {
     const sortedGames = [...allGames].sort((a, b) => b.metacritic_score - a.metacritic_score);
     createGameCards(sortedGames); // Mostrar juegos ordenados
 }
+*/

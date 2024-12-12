@@ -7,12 +7,27 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <form>
-
-        <input type="text" name="usuario">
-        <input type="password" name="password">
-        <input type="submit" value="Enviar">
-
+    <form id="loginForm">
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" required>
+        <br>
+        <label for="clave">Clave:</label>
+        <input type="password" id="clave" name="clave" required>
+        <br>
+        <button type="button" id="enviarLogin">Enviar</button>
     </form>
+    <div id="resultadoLogin"></div>
+
+    
+    <script>
+        $("#enviarLogin").click(function() {
+            const datos = $("#loginForm").serialize();
+            $.get("verificar.php", datos, function(response) {
+                $("#resultadoLogin").html(response);
+            }).fail(function() {
+                alert("Error al procesar el formulario.");
+            });
+        });
+    </script>
 </body>
 </html>
