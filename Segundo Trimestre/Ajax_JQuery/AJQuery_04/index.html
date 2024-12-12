@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h2>Enviar Parámetros con $.post</h2>
+    <button id="enviarParametros">Enviar Parámetros</button>
+    <div id="resultadoPHP"></div>
+
+    <script>
+        $("#enviarParametros").click(function() {
+            $.post("procesar.php", { nombre: "Juan", apellido: "Pérez" }, function(data) {
+                $("#resultadoPHP").html(data);
+            }).fail(function() {
+                alert("Error al procesar la petición.");
+            });
+        });
+    </script>
+</body>
+</html>
