@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Movimiento del cubo</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="controls">
+        <button id="start">Iniciar Efecto</button>
+        <button id="stop">Parar Efecto</button>
+    </div>
+    <div id="container">
+        <div id="cubo"></div>
+    </div>
+</body>
+<style>
+    
+    #container {
+        width: 400px;
+        height: 400px;
+        position: relative;
+        margin: 50px auto;
+      
+        background-color: #100404;
+    }
+
+
+    #cubo {
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+   
+    #controls {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+   
+</style>
+<script src="script.js"></script>
+</html>

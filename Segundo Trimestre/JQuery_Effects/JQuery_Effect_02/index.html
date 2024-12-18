@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="container">
+        <p id="mensaje">Hola muy buenas tardes</p>
+        <p id="mensaje-despedida">Adiós :(((</p>
+        <div id="botones">
+            <button id="saludo">Saludo :O</button>
+            <button id="despedida"> adiós</button>
+        </div>
+    </div>
+    <style>
+        
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #007bff; 
+        }
+    
+      
+        #container {
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+    
+    
+        #mensaje {
+            font-size: 24px;
+            opacity: 0; 
+           
+        }
+    
+        #mensaje-despedida{
+            font-size: 24px;
+            opacity: 0; 
+          
+        }
+
+        #botones button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</body>
+</html>
