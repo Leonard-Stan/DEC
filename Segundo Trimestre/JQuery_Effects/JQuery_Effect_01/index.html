@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Efectos con jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   
+    
+</head>
+<body>
+    <div>
+        <button id="hide">Hide</button>
+        <button id="show">Show</button>
+        <button id="fadeOut">Fade Out</button>
+        <button id="fadeIn">Fade In</button>
+        <button id="slideUp">Slide Up</button>
+        <button id="slideDown">Slide Down</button>
+        <button id="animate">Animate</button>
+    </div>
+    
+    <img id="imagen" src="https://picsum.photos/640/480" alt="Imagen">
+    <script src="script.js"></script>
+</body>
+<style>
+       body {
+        min-width: 100vw;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    div {
+        margin-bottom: 20px;
+    }
+    #imagen {
+        position: relative;
+        height: auto;
+    }
+</style>
+</html>
