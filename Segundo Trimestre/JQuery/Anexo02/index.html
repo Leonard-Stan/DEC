@@ -19,15 +19,15 @@
         $.ajax({
         
             type:"GET",
-            url: "fecha.php",
+            url: "fecha.ph",
 
             success: function (hora) {
                                 
                 $("div").html(hora);
 
             },
-                error: function () {
-                alert("no funciona");            
+            error: function (jqXHR, status) {
+                alert(jqXHR.status+" "+jqXHR.statusText);            
             }
             })
 

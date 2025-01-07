@@ -16,6 +16,9 @@ $(function () {
     $('#fadeOut').on("click", function() {
         $('#imagen').fadeOut(100);
     })
+    $('#fadeIn').on("click", function() {
+        $('#imagen').fadeIn(100);
+    })
 
     $('#slideUp').on("click", function() {
         $('#imagen').slideUp();
