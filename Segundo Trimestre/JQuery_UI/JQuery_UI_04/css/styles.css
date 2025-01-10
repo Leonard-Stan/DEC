@@ -1,0 +1,19 @@
+#container {
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid black;
+}
+#img1, #img2 {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+}
+
+#img1{
+    z-index: 2;
+}
+#img2{
+    z-index: 1;
+    }

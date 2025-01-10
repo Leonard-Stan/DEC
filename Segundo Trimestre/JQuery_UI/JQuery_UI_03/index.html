@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salta Plugin</title>
+    <style>
+        #cuadrado {
+            height: 64px;
+            width: 64px;
+            background-color: black;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="cuadrado"></div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+<script>
+    (function ($) {
+        $.fn.extend({
+            saltaPlugin: function (options) {
+                const defaults = {
+                    height: 50, 
+                    speed: 2000, 
+                    repeat: 3  
+                };
+
+              
+                const settings = $.extend({}, defaults, options);
+
+                return this.each(function () {
+                    const $element = $(this);
+
+                    function salto(count) {
+                        if (count > 0) {
+                            $element.animate(
+                                { top: `-=${settings.height}px` },
+                                settings.speed,
+                                function () {
+                                    $element.animate(
+                                        { top: `+=${settings.height}px` }, 
+                                        settings.speed,
+                                        function () {
+                                            salto(count - 1); 
+                                        }
+                                    );
+                                }
+                            );
+                        }
+                    }
+
+                   
+                    salto(settings.repeat);
+                });
+            }
+        });
+    })(jQuery);
+
+   
+    $(function () {
+        $('#cuadrado').saltaPlugin({
+            height: 100, 
+            speed: 1000,  
+            repeat: 2   
+        });
+    });
+</script>
+</html>

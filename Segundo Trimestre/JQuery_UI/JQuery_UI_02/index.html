@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="cuadrado" style="height: 64px; width: 64px; background-color:black; position: absolute; margin-top: 100px; "></div>    
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+
+<script>
+
+$(function () {
+    jQuery.fn.salta = function () {
+        return this.each(function () {
+            var $this = $(this);
+            $this.animate(
+                { top: '-=50px' },
+                500,
+                function () {
+                    $this.animate({ top: '+=50px' }, 500);
+                }
+            );
+        });
+    };
+
+    setInterval(function () {
+        $('#cuadrado').salta();
+    }, 1000); 
+});
+
+   
+
+
+
+
+ 
+
+
+</script>
+</html>
