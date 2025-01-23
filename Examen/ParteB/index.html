@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <img src="https://picsum.photos/480" alt="">
+
+
+    <div id="textocontainer"></div>
+
+    <button>Cambiar color fondo</button>
+    <script>
+
+        //Cargar el texto con Ajax
+       var contenedor = document.getElementById("textocontainer");
+       var xhr = new XMLHttpRequest();
+
+       let archivo = "texto.txt";
+
+       xhr.onreadystatechange = function () {
+             
+             if(this.readyState == 4 && this.status == 200){
+                 console.log("Llega");
+                 contenedor.innerHTML ="<p>"+this.responseText+"</p>";
+             }
+ 
+             
+             
+         }
+ 
+         xhr.open("GET", archivo, true);
+         xhr.send();
+ 
+        //fundido con JQuery al pasar el ratón por encima desaparece y aparece, no hace nada al quitar el ratón
+       $(function(){
+
+        //también se puede con queue pero al no haber css no hace falta
+        $('img').hover(function(){
+            $(this).fadeOut(1000).fadeIn(1000);
+        })
+
+      
+
+       
+
+
+       //plugin
+       jQuery.fn.backgroundchange = function(){
+            return this.each(function(){
+               var $this = $('p');
+               
+               $this.css("background-color", "green");
+
+            })
+        }
+
+
+        $('button').on('click', function(){
+            $(this).backgroundchange();
+        })
+        
+       })  
+
+
+    </script>
+</body>
+</html>

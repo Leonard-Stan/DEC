@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <h1> --- OFERTAS ---</h1>
+
+    <div id="contenedor">
+
+
+    </div>
+
+    
+  <div>
+    <input type="radio" id="marruecos" name="lave" value="marruecos"/>
+    <label for="marruecos">Viaje a Marruecos</label>
+  </div>
+
+  <div>
+    <input type="radio" id="india" name="lave" value="india"/>
+    <label for="india">Viaje a India</label>
+  </div>
+
+  <input type="checkbox" name="oferta" id="oferta" value="oferta">
+  <label for="oferta">Extras Oferta</label>
+  
+  <div id="precio"></div>
+  
+
+  <script>
+    $(function () {
+
+        var precio = 0;
+        
+        $('input').change(function(){
+
+            if($(this).attr('type')=="radio"){
+                if($(this).attr('value')=="marruecos"){
+                    precio = 600;
+
+                    $('#precio').html('<input type="text" value='+precio+' readonly></input>')
+                }else if($(this).attr('value')=="india"){
+                    precio = 1000;
+                    console.log(precio);
+                    $('#precio').html('<input type="text" value='+precio+' readonly></input>')
+                }
+            }
+
+            if($(this).attr('type')=="checkbox"){
+                if($(this).prop("checked")){
+
+                   
+                $.ajax({
+                type: "GET",
+                url: "texto.txt",
+                success: function(data) {
+                    $("#contenedor").html(data).css({border: '0 solid #f37736'}).animate({
+                    borderWidth: 4,
+                    fontSize: "25pt"
+                }, 500);
+                            
+                },
+                error: function() {
+                    alert("Error al cargar el fichero de texto.");
+                }
+                });
+
+
+
+
+                }else{
+
+                    $("#contenedor").html("").css({border:'0px', fontSize:'10pt'});
+
+        
+                }
+            }
+            
+        })
+        
+    })
+
+
+/*
+    $('div img').mouseenter(function () {
+    $(this).css({border: '0 solid #f37736'}).animate({
+        borderWidth: 4
+    }, 500);
+}).mouseleave(function () {
+     $(this).animate({
+        borderWidth: 0
+    }, 500);
+});
+*/
+  </script>
+</body>
+</html>
