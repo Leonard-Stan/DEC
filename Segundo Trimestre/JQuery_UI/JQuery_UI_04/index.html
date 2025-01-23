@@ -1,24 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Animation</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Carrusel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 </head>
 <body>
-    <div id="container">
-        <div id="img1">
-            <img src="https://picsum.photos/401/300"> 
-        </div>
-        <div id="img2">
-            <img src="https://picsum.photos/400/300">
-        </div>
+    <h1>Carrusel de imágenes</h1>
+    <div class="owl-carousel">
+        <div><img src="https://picsum.photos/640/480" alt="Imagen 1"></div>
+        <div><img src="https://picsum.photos/640/481" alt="Imagen 2"></div>
+        <div><img src="https://picsum.photos/640/482" alt="Imagen 3"></div>
     </div>
-    <button id="Next">Next</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".owl-carousel").owlCarousel({
+                loop: true,
+                margin: 500,
+                nav: true,
+                items: 1
+            });
+        });
+    </script>
 </body>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
-<script src="script.js"></script>
 </html>
