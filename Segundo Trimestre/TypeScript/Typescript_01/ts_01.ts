@@ -17,7 +17,7 @@ function calcularIva2(precio: number): string {
 
 function ejercicio22() {
     const precioArticulo = 100; 
-    const precioFinal = calcularIva(precioArticulo);
+    const precioFinal = calcularIva2(precioArticulo);
     console.log(`Precio final con IVA: ${precioFinal}`);
 }
 
@@ -74,13 +74,15 @@ class Curso2 {
 }
 
 function ejercicio4y52() {
-    const alumno = new Alumno("Adrian Stan", 21, "2CFSJ");
-    const curso = new Curso(" curso de grado superior de DAW");
+    const alumno = new Alumno2("Adrian Stan", 21, "2CFSJ");
+    const curso = new Curso2(" curso de grado superior de DAW");
     curso.combinarConAlumno(alumno);
 }
 
 
-ejercicio1();
-ejercicio2();
-ejercicio3();
-ejercicio4y5();
+ejercicio12();
+/*
+ejercicio22();
+ejercicio32();
+ejercicio4y52();
+*/
