@@ -26,6 +26,18 @@
           $("#loginModal").fadeIn(300);
           $("#registerModal").fadeOut(300);
       });
+
+
+      
+      $("#menu-button").click(function(){
+        let menu = $("#menu");
+        if (menu.css("left") === "-250px") {
+            menu.animate({ left: "0px" }, 500, "linear"); // Movimiento uniforme
+        } else {
+            menu.animate({ left: "-250px" }, 500, "linear");
+        }
+    });
+
   };
 })(jQuery);
 

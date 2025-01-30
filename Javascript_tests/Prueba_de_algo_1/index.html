@@ -11,12 +11,15 @@
     <script defer src="js/tienda.js"></script>
     <script defer src="js/register.js"></script>
     <script defer src="js/login.js"></script>
+    <script src="js/plugin.js"></script>
     <link rel="icon" type="image/x-icon" href="img/Cat's Hub.png">
     <link rel="stylesheet" href="css/inicio.css">
+    <link rel="stylesheet" href="css/modal.css">
 
 </head>
 <body>
 
+  <div id="modal-widget-container"> 
     <!-- Barra de Navegación -->
     <nav>
         <!-- Logo -->
@@ -25,7 +28,7 @@
         </div>
         
         <!-- Botón de Menú de Hamburguesa -->
-        <div class="menu-button" id="menu-button" onclick="toggleMenu()">
+        <div class="menu-button" id="menu-button">
           <div class="categoria">
             ☰ CATEGORÍAS
           </div>
@@ -50,6 +53,8 @@
 
             <button id="registerBtn" class="btn-open-register">Registrarse</button>
         </div>
+
+        <button id="invert-button" class="btn-open-login">Invertir Fondo</button>
     </nav>
     
 
@@ -179,6 +184,6 @@
       <p class="login-link">¿Ya tienes cuenta?<button id="register-login-btn"> Inicia sesión</button></p>
     </div>
   </div>
-
+</div>
 </body>
 </html>

@@ -66,30 +66,59 @@ function createGameCards(games) {
 
 }
 
-/* Función para filtrar juegos por géneros
-function filterGames() {
-    const tags = document.getElementById('tag-input').value.toLowerCase().split(',').map(tag => tag.trim());
-    console.log("Etiquetas de filtro:", tags);
+// Crear el modal en el DOM si no existe
+if ($("#game-modal").length === 0) {
+    $("body").append(`
+        <div id="game-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modal-title"></h2>
+                <img id="modal-image" src="" alt="">
+                <p id="modal-genre"></p>
+                <p id="modal-score"></p>
+                <button id="buy-button">Comprar</button>
+                <button id="like-button">❤️ Me gusta</button>
+                <p id="like-message" style="display: none; color: green;">¡Te gusta este juego!</p>
+            </div>
+        </div>
+    `);
+}
 
-    const filteredGames = allGames.filter(game => {
-        return tags.every(tag => game.genre.toLowerCase().includes(tag));
+// Función para mostrar el modal con la info del juego
+function showGameModal(game) {
+    $("#modal-title").text(game.name);
+    $("#modal-image").attr("src", game.image_path).attr("alt", game.name);
+    $("#modal-genre").text(`Género: ${game.genre}`);
+    $("#modal-score").text(`Metacritic: ${game.metacritic_score}`);
+
+    $("#buy-button").off("click").on("click", function() {
+        alert(`Has comprado ${game.name}!`);
     });
 
-    console.log("Juegos filtrados:", filteredGames);
-    createGameCards(filteredGames);
+    $("#like-button").off("click").on("click", function() {
+        $("#like-message").fadeIn();
+        setTimeout(() => $("#like-message").fadeOut(), 2000);
+    });
+
+    $("#game-modal").fadeIn();
 }
 
+// Manejo del cierre del modal
+$(document).on("click", ".close", function() {
+    $("#game-modal").fadeOut();
+});
 
+// Cerrar modal al hacer clic fuera de él
+$(document).on("click", "#game-modal", function(event) {
+    if ($(event.target).is("#game-modal")) {
+        $("#game-modal").fadeOut();
+    }
+});
 
-// Función para ordenar juegos por nombre
-function sortByName() {
-    const sortedGames = [...allGames].sort((a, b) => a.name.localeCompare(b.name));
-    createGameCards(sortedGames); // Mostrar juegos ordenados
-}
-
-// Función para ordenar juegos por nota
-function sortByScore() {
-    const sortedGames = [...allGames].sort((a, b) => b.metacritic_score - a.metacritic_score);
-    createGameCards(sortedGames); // Mostrar juegos ordenados
-}
-*/
+// Detectar clic en una card y abrir el modal
+$(document).on("click", ".card", function() {
+    const gameIndex = $(this).index();
+    if (allGames[gameIndex]) {
+        showGameModal(allGames[gameIndex]);
+    }
+});
