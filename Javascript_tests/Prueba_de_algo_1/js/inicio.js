@@ -66,10 +66,11 @@ function createGameCards(games) {
 
 }
 
-// Crear el modal en el DOM si no existe
-if ($("#game-modal").length === 0) {
-    $("body").append(`
-        <div id="game-modal" class="modal">
+
+// Verificar si el modal ya existe para evitar duplicados
+if (!document.getElementById("game-modal")) {
+    const modalHTML = `
+        <div id="game-modal" class="modal" style="display: none;">
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <h2 id="modal-title"></h2>
@@ -81,8 +82,10 @@ if ($("#game-modal").length === 0) {
                 <p id="like-message" style="display: none; color: green;">¡Te gusta este juego!</p>
             </div>
         </div>
-    `);
+    `;
+    document.body.insertAdjacentHTML("beforeend", modalHTML);
 }
+
 
 // Función para mostrar el modal con la info del juego
 function showGameModal(game) {
@@ -100,8 +103,10 @@ function showGameModal(game) {
         setTimeout(() => $("#like-message").fadeOut(), 2000);
     });
 
-    $("#game-modal").fadeIn();
+    // Solución para evitar parpadeo
+    $("#game-modal").css("opacity", 0).css("display", "flex").animate({ opacity: 1 }, 300);
 }
+
 
 // Manejo del cierre del modal
 $(document).on("click", ".close", function() {
@@ -122,3 +127,23 @@ $(document).on("click", ".card", function() {
         showGameModal(allGames[gameIndex]);
     }
 });
+
+
+/* Crear el modal en el DOM si no existe
+if ($("#game-modal").length === 0) {
+    $("body").append(`
+        <div id="game-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modal-title"></h2>
+                <img id="modal-image" src="" alt="">
+                <p id="modal-genre"></p>
+                <p id="modal-score"></p>
+                <button id="buy-button">Comprar</button>
+                <button id="like-button">❤️ Me gusta</button>
+                <p id="like-message" style="display: none; color: green;">¡Te gusta este juego!</p>
+            </div>
+        </div>
+    `);
+}
+*/
