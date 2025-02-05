@@ -38,6 +38,11 @@
         }
     });
 
+    $("#cart").click(function () {
+        $("#cart-modal").fadeIn(300)
+        console.log(1)
+    })
+
   };
 })(jQuery);
 

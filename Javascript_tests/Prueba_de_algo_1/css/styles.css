@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    -webkit-user-drag: none;
+    
 }
 
 body{
@@ -51,7 +51,8 @@ nav {
   transition: 0.5s;
 }
 .btn-shop:hover{
- color: #E77D3E;
+
+  color: #00ff9d; /* Asegúrate de que el texto sea visible sobre el gradiente */
 }
 
 
@@ -76,19 +77,20 @@ nav {
 }
 
 .search-container button {
-    width: 60px;
-    padding: 3.2px 4px;
-    background-color:  #2C3E50;
-    
-    color: white;
-    border: none;
-    border-radius: 0 20px 20px 0;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  width: 60px;
+  padding: 3.2px 4px;
+  background-color: #2C3E50;
+  color: white;
+  border: none;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .search-container button:hover {
-    background-color: #FF914D;
+  background-image: linear-gradient(45deg, #00ff9d 0%, #00b8ff 100%);
+  color: white; /* Asegúrate de que el texto sea visible */
+ 
 }
 
 
@@ -122,7 +124,7 @@ nav {
     bottom: -5px;
     width: 0;
     height: 2px;
-    background-color: #FF914D;
+    background-image: linear-gradient(45deg, #00ff9d 0%, #00b8ff 100%);
     transition: all 0.3s ease;
     transform: translateX(-50%);
     
@@ -134,13 +136,13 @@ nav {
 
 
   .btn-open-login:hover, .btn-open-register:hover {
-    color: #E77D3E;
+    color: #00ff9d;
   }
 
   #login-register-btn, #register-login-btn{ 
     background: none;
     border: none;
-    color: #E77D3E;
+    color: #00ff9d;
   }
   #login-register-btn:hover, #register-login-btn:hover {
     text-decoration: underline;
@@ -164,7 +166,7 @@ nav {
     transition: 0.5s;
 }
 .menu-button:hover {
-    color: #eb813f;
+    color: #00ff9d;
 
     }
 
@@ -348,4 +350,93 @@ nav {
         width: 100%;
         justify-content: space-between;
     }
+}
+
+
+
+/* Estilos para los elementos dentro del carrito */
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin: 12px 0;
+  padding: 12px;
+  border: 1px solid #ccc;
+  background-color: #1a1a1a; /* Fondo oscuro para un toque gaming */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra más intensa */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Transición más suave */
+}
+
+.cart-item:hover {
+  transform: translateY(-6px); /* Más prominente cuando se pasa el mouse */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25); /* Sombra más fuerte */
+  background-color: #2c2c2c; /* Fondo más oscuro al pasar el mouse */
+}
+
+.cart-item-image {
+  width: 160px;
+  height: 90px;
+  margin-right: 20px;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.cart-item-image:hover {
+  transform: scale(1.05); /* Agrandar la imagen ligeramente al pasar el mouse */
+}
+
+.cart-item-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #f1f1f1; /* Blanco claro para el texto */
+  flex-grow: 1;
+  text-transform: capitalize;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+
+
+.cart-item-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #50c878; /* Color verde más suave para los precios */
+  margin-left: 15px;
+  transition: color 0.3s ease;
+}
+
+.cart-item-price:hover {
+  color: #fff; /* Cambiar color del precio al pasar el mouse */
+}
+
+/* Estilo adicional para el contenedor del carrito */
+#cart-items {
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 10px;
+  padding-left: 10px; /* Añadir un poco de margen */
+  margin-top: 20px;
+  background-color: #212121; /* Fondo oscuro para el contenedor */
+  border-radius: 8px;
+}
+
+/* Estilo para el carrito cuando el mouse está encima */
+#cart.over {
+  background-image: linear-gradient(45deg, #00ff9d 0%, #00b8ff 100%);
+  transform: scale(1.05); /* Agrandar el carrito ligeramente */
+  box-shadow: 0 6px 18px rgba(39, 174, 96, 0.6); /* Resplandor verde con mayor intensidad */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#cart {
+  padding: 5px 45px 1px 45px;
+  background-color: #333; /* Fondo más oscuro para el carrito */
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+#cart:hover {
+  background-image: linear-gradient(45deg, #00ff9d 0%, #00b8ff 100%);
+  transform: translateY(-4px); /* Efecto de "levitar" */
 }

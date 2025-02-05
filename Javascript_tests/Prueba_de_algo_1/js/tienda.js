@@ -79,3 +79,6 @@ function sortByScore() {
     const sortedGames = [...allGames].sort((a, b) => b.metacritic_score - a.metacritic_score);
     createGameCards(sortedGames); // Mostrar juegos ordenados
 }
+
+
+

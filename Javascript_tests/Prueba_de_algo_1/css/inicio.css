@@ -1,7 +1,8 @@
+
 /* Card Container */
 .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
     gap: 2rem;
     padding: 2rem;
     max-width: auto;
@@ -10,7 +11,8 @@
   
   /* Card Base */
   .card {
-    height: 450px;
+    height: 215px;
+    width: 450px;
     position: relative;
     border-radius: 20px;
     overflow: hidden;
@@ -197,3 +199,4 @@
       box-shadow: 0 0 30px rgba(0, 255, 157, 0.1);
     }
   }
+
