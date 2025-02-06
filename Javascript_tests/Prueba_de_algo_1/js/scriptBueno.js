@@ -49,4 +49,5 @@
 $(document).ready(function () {
   // Inicializar el widget de modales
   $('#modal-widget-container').modalWidget();
+  
 });

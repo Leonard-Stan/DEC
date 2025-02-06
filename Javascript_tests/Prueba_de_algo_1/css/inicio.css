@@ -31,6 +31,13 @@
                 inset 0 0 50px rgba(0, 255, 157, 0.1);
   }
   
+  .card.dragging {
+    opacity: 0.5; /* Reduce opacidad mientras se arrastra */
+    transform: scale(4.1); /* Agranda el elemento ligeramente */
+    border: 2px dashed #000; /* Cambia el borde */
+}
+
+
   /* Card Image */
   .card-image {
     width: 100%;

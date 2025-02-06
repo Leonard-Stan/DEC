@@ -9,6 +9,7 @@ let allGames = [];
 
 
 
+
 // Función para cargar el JSON
 function loadGames() {
     fetch('popular_top_rated_games_2024.json')
@@ -94,6 +95,17 @@ function createGameCards(games) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 const cart = document.getElementById('cart');
 const cartItems = document.getElementById('cart-items');
 let totalPrice = 0;
@@ -157,6 +169,9 @@ cart.addEventListener('drop', function (e) {
     $('#total-price').html(totalPrice);
 
 });
+
+
+
 
 
 
@@ -251,11 +266,6 @@ $(document).on("click", ".card", function() {
         showGameModal(allGames[gameIndex]);
     }
 });
-
-
-
-
-
 
 
 

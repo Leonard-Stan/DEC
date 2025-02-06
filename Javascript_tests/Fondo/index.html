@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+  background: linear-gradient(180deg, #0d0f1a 0%, #1a1c25 100%);
+  background-attachment: fixed;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.5s ease-in-out;
+}
+
+/* Luces dinámicas */
+.background-overlay::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 20%, rgba(0, 255, 157, 0.1), transparent),
+              radial-gradient(circle at 70% 80%, rgba(0, 184, 255, 0.2), transparent);
+  pointer-events: none;
+  z-index: -2;
+  animation: pulseLights 6s infinite alternate ease-in-out;
+}
+
+/* Textura de ruido */
+.background-overlay::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/dark-matter.png');
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Patrón hexagonal gaming */
+.background-grid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://www.transparenttextures.com/patterns/hexellence.png');
+  opacity: 0.03;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: -1;
+  animation: moveGrid 10s linear infinite;
+}
+
+/* Animación de luces */
+@keyframes pulseLights {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+/* Movimiento del patrón hexagonal */
+@keyframes moveGrid {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100px 100px;
+  }
+}
+
+/* Estilos para el botón de inversión */
+#invert-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(45deg, #00ff9d, #00b8ff);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+#invert-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 255, 157, 0.4);
+}
+
+#color-info {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+    </style>
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body class="background-overlay">
+    <div class="background-grid"></div>
+    
+    <button id="invert-button">Invertir Colores</button>
+    <div id="color-info">Color complementario: </div>
+    <script>
+        (function($) {
+    $.fn.invertBackground = function(options) {
+        let settings = $.extend({
+            target: "body", // Por defecto cambia el fondo del <body>
+            infoBox: "#color-info" // Elemento donde se mostrará el color complementario
+        }, options);
+
+        this.click(function() {
+            let targetElement = $(settings.target);
+            let infoBox = $(settings.infoBox);
+            let bgColor = targetElement.css("background-color");
+
+            if (bgColor.includes("rgb")) {
+                let rgb = bgColor.match(/\d+/g);
+                let invertedColor = `rgb(${255 - rgb[0]}, ${255 - rgb[1]}, ${255 - rgb[2]})`;
+                targetElement.css("background-color", invertedColor);
+                infoBox.text(`Color complementario: ${invertedColor}`).css("color", invertedColor);
+            }
+        });
+        return this;
+    };
+})(jQuery);
+
+// Uso del plugin
+$(document).ready(function() {
+    $("#invert-button").invertBackground({ infoBox: "#color-info" });
+});
+
+    </script>
+  </body>
+  
+</html>

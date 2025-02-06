@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Cuando el script se carga, ejecuta loadGames
                 script.onload = () => {
                     loadGames();
+                    
                 };
             } else {
                 // Si el script ya se ha cargado, solo llama a loadGames nuevamente
