@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juegos</title>
     <link rel="stylesheet" href="css/inicio.css">
+  
 </head>
 <body>
     <div class="filter-container">
@@ -13,9 +14,17 @@
         <button id="sort-name" class="filter-button">Ordenar por Nombre</button>
         <button id="sort-score" class="filter-button">Ordenar por Nota</button>
     </div>
+    <select id="genre-selector">
+        <option value="0">Selecciona un género</option>
+    </select>
+    
 
-    <div id="games-container" class="card-container"></div>
+    <div id="games-container" class="card-container">
+        
+    </div>
 
+    <script src="js/plugin.js"></script>
     <script src="scripts/inicio.js"></script>
+   
 </body>
 </html>

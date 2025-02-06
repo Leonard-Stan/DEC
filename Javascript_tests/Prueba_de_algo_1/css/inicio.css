@@ -1,153 +1,202 @@
-/* Contenedor principal para las cartas */
+
+/* Card Container */
 .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 18px;
-    justify-content: center;
-    margin-top: 20px; 
-}
-
-/* Estilos para cada carta */
-.card {
-    border: none;
-
-    border-radius: 10px; 
-    width: fit-content;
-    height: 400px; 
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-    overflow: hidden; 
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: auto;
+    margin: 50px auto;
+  }
+  
+  /* Card Base */
+  .card {
+    height: 215px;
+    width: 450px;
     position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
-    background-color: #063052;
-}
-
-/* Efecto hover: aumenta el tamaño y suaviza la sombra */
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
-}
-
-/* Contenedor de la imagen, asegurando que ocupe toda la parte superior de la carta */
-.card-image {
+    border-radius: 20px;
+    overflow: hidden;
+    background: linear-gradient(165deg, #1a1c25 0%, #262935 100%);
+    border: 1px solid rgba(0, 255, 157, 0.2);
+    box-shadow: 0 0 30px rgba(0, 255, 157, 0.1),
+                inset 0 0 30px rgba(0, 255, 157, 0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: rgba(0, 255, 157, 0.4);
+    box-shadow: 0 10px 40px rgba(0, 255, 157, 0.2),
+                inset 0 0 50px rgba(0, 255, 157, 0.1);
+  }
+  
+  /* Card Image */
+  .card-image {
     width: 100%;
-    height: 60%; /* 60% de la altura de la carta */
-    object-fit: fill; /* La imagen cubre todo el área sin distorsión */
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-/* Contenedor del texto, con un filtro para mejorar la legibilidad */
-.card-content {
-    padding: 15px;
-    background: rgba(0, 0, 0, 0.6); 
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .card:hover .card-image {
+    transform: scale(1.05);
+  }
+  
+  /* Card Content */
+  .card-content {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
-    z-index: 1; 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-/* Título de la carta */
-.card-title {
-    font-size: 26px;
-    font-weight: bold;
+    right: 0;
+    padding: 2rem;
+    background: linear-gradient(
+      to top,
+      rgba(26, 28, 37, 0.95) 0%,
+      rgba(26, 28, 37, 0.8) 60%,
+      rgba(26, 28, 37, 0) 100%
+    );
+    backdrop-filter: blur(8px);
+    transform: translateY(0);
+    transition: all 0.4s ease;
+  }
+  
+  .card:hover .card-content {
+    transform: translateY(-5px);
+  }
+  
+  /* Card Title */
+  .card-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    background: linear-gradient(90deg, #00ff9d, #00b8ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(0, 255, 157, 0.3);
+  }
+  
+  /* Card Genres */
+  .card-genres {
+    font-size: 1rem;
+    color: #8a8f9e;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+  }
+  
+  .card:hover .card-genres {
     color: #fff;
-    margin: 10px;
-    padding-bottom: 8px; 
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); 
-}
-
-/* Géneros del juego */
-.card-genres {
-    font-size: 22px;
-    color: #ddd; 
-    margin: 12px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); 
-}
-
-/* Puntuación de Metacritic */
-.card-score {
-    font-size: 18px;
-    margin: 14px;
-    font-weight: bold;
-    color: #2196F3; 
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-/* Estilos para el filtro */
-.filter-container {
-    margin-top: 25px;
-    margin-bottom: 30px; 
+  }
+  
+  /* Card Score */
+  .card-score {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #00ff9d;
+    text-shadow: 0 0 15px rgba(0, 255, 157, 0.5);
+  }
+  
+  /* Filter Container */
+  .filter-container {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 1rem;
+    padding: 2rem;
     flex-wrap: wrap;
-}
-
-.filter-button {
-    padding: 12px 18px;
-    font-size: 16px;
-    font-weight: bold;
-    background-color: #2196F3;
-    color: white;
-    border: none;
-    border-radius: 5px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Filter Buttons */
+  .filter-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    background: linear-gradient(45deg, #1a1c25 0%, #262935 100%);
+    border: 1px solid rgba(0, 255, 157, 0.3);
+    border-radius: 12px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.filter-button:hover {
-    background-color: #1976D2; 
-    transform: translateY(-2px); 
-}
-
-/* Estilo adicional para los filtros activos */
-.filter-button:active {
-    transform: translateY(2px); 
-}
-
-/* Botón para limpiar el filtro */
-.clear-filter-button {
-    padding: 12px 18px;
-    font-size: 16px;
-    font-weight: bold;
-    background-color: #F44336;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.clear-filter-button:hover {
-    background-color: #D32F2F; 
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-transform: uppercase;
+  }
+  
+  .filter-button:hover {
+    background: linear-gradient(45deg, #00ff9d 0%, #00b8ff 100%);
+    border-color: transparent;
+    color: #1a1c25;
     transform: translateY(-2px);
-}
-
-.clear-filter-button:active {
-    transform: translateY(2px); /* Efecto de presionar */
-}
-
-/* Estilos Responsivos para pantallas pequeñas */
-@media (max-width: 768px) {
+    box-shadow: 0 5px 20px rgba(0, 255, 157, 0.4);
+  }
+  
+  .filter-button:active {
+    transform: translateY(1px);
+  }
+  
+  /* Clear Filter Button */
+  .clear-filter-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    background: linear-gradient(45deg, #ff3860 0%, #ff416c 100%);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-transform: uppercase;
+    box-shadow: 0 0 20px rgba(255, 56, 96, 0.3);
+  }
+  
+  .clear-filter-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 25px rgba(255, 56, 96, 0.5);
+  }
+  
+  .clear-filter-button:active {
+    transform: translateY(1px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
     .card-container {
-        flex-direction: column;
-        align-items: center;
+      grid-template-columns: 1fr;
+      padding: 1rem;
     }
-
+  
     .card {
-        width: 80%; /* Las cartas ocupan más ancho en pantallas más pequeñas */
+      height: 400px;
     }
-
+  
+    .card-title {
+      font-size: 1.5rem;
+    }
+  
     .filter-container {
-        flex-direction: column;
-        gap: 10px;
+      flex-direction: column;
+      padding: 1rem;
     }
-}
+  
+    .filter-button,
+    .clear-filter-button {
+      width: 100%;
+    }
+  }
+  
+  /* Animation Keyframes */
+  @keyframes cardPulse {
+    0% {
+      box-shadow: 0 0 30px rgba(0, 255, 157, 0.1);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(0, 255, 157, 0.2);
+    }
+    100% {
+      box-shadow: 0 0 30px rgba(0, 255, 157, 0.1);
+    }
+  }
+

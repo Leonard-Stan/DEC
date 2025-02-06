@@ -5,18 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cat's Hub</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    
     <script defer src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="js/plugin.js"></script>
     <script defer src="js/scriptBueno.js"></script>
     <script defer src="js/tienda.js"></script>
     <script defer src="js/register.js"></script>
     <script defer src="js/login.js"></script>
-    <script defer src="js/barra_busqueda.js"></script>
+
     <link rel="icon" type="image/x-icon" href="img/Cat's Hub.png">
     <link rel="stylesheet" href="css/inicio.css">
+    <link rel="stylesheet" href="css/modal.css">
 
 </head>
 <body>
 
+  <div id="modal-widget-container"> 
     <!-- Barra de Navegación -->
     <nav>
         <!-- Logo -->
@@ -25,7 +30,7 @@
         </div>
         
         <!-- Botón de Menú de Hamburguesa -->
-        <div class="menu-button" id="menu-button" onclick="toggleMenu()">
+        <div class="menu-button" id="menu-button">
           <div class="categoria">
             ☰ CATEGORÍAS
           </div>
@@ -43,6 +48,44 @@
             </button>
         </div>
         
+  
+
+       <!-- Aquí agregamos el contenedor del carrito -->
+<div id="cart" class="cart">
+  <box-icon name='cart-add' color="white" size="32px"></box-icon>
+</div>
+
+
+
+
+
+
+<!-- Modal del carrito -->
+<div id="cart-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="close-cart">&times;</span>
+        <h2>Mi Carrito</h2>
+        <div id="cart-items">
+            
+        </div>
+        <div id="cart-total">
+            <h3>Total: <span id="total-price">$0</span></h3>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
         <!-- Botones de Usuario -->
         <div class="user-options">
           
@@ -50,8 +93,9 @@
 
             <button id="registerBtn" class="btn-open-register">Registrarse</button>
         </div>
+
     </nav>
-    
+   
 
    <!-- Menú Desplegable -->
     <div id="menu" class="menu">
@@ -70,12 +114,13 @@
 <!-- Contenedor donde se cargarán las cartas de juegos -->
 <div id="games-container" class="card-container"></div>
 
-
-<div>
+/
+<div id="catlogo">
   <h1> ¡Bienvenido a Cat's Hub! Aún estamos en desarrollo</h1>
-  <img src="img/in develompent.jpg" alt="" style="width: 50vh; display: block; margin: 0 auto;"> 
+  <!-- Hacemos que la imagen sea arrastrable con draggable="true" -->
+  <img id="draggableImage" src="img/in develompent.jpg" alt="Imagen en desarrollo" 
+       style="width: 50vh; display: block; margin: 0 auto;" draggable="true">
 </div>
-
 
 
 
@@ -179,6 +224,9 @@
       <p class="login-link">¿Ya tienes cuenta?<button id="register-login-btn"> Inicia sesión</button></p>
     </div>
   </div>
+</div>
+
+
 
 </body>
 </html>
